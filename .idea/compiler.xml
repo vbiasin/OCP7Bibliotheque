@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="BibliothequeEureka" />
+        <module name="BibliothequeSpringCloudConfig" />
+        <module name="BibliothequeWeb" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BibliothequeEureka" target="11" />
+      <module name="BibliothequeSpringCloudConfig" target="11" />
+      <module name="BibliothequeWeb" target="11" />
+      <module name="OCP7Bibliotheque" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BibliothequeEureka" options="-parameters" />
+      <module name="BibliothequeSpringCloudConfig" options="-parameters" />
+      <module name="BibliothequeWeb" options="-parameters" />
+      <module name="OCP7Bibliotheque" options="-parameters" />
+    </option>
+  </component>
+</project>
