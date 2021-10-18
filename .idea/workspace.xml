@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="582d5dfb-db13-41f6-9b23-1fbde8eebe54" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/config-server-repo/BibliothequeSpringCloudConfig.properties" afterDir="false" />
+    <list default="true" id="582d5dfb-db13-41f6-9b23-1fbde8eebe54" name="Changes" comment="premier test config externalisee">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/src/main/java/com/ocp7bibliotheque/bibliothequespringcloudconfig/BibliothequeSpringCloudConfigApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/src/main/java/com/ocp7bibliotheque/bibliothequespringcloudconfig/BibliothequeSpringCloudConfigApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server-repo/BibliothequeSpringCloudConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repo/BibliothequeSpringCloudConfig.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +72,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BibliothequeWebApplication">
+  <component name="RunManager" selected="Spring Boot.BibliothequeSpringCloudConfigApplication">
     <configuration name="BibliothequeEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="BibliothequeEureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequeeureka.BibliothequeEurekaApplication" />
@@ -110,7 +113,7 @@
       <workItem from="1634307304565" duration="4375000" />
       <workItem from="1634394676521" duration="1678000" />
       <workItem from="1634581281751" duration="797000" />
-      <workItem from="1634584112767" duration="1146000" />
+      <workItem from="1634584112767" duration="2137000" />
     </task>
     <task id="LOCAL-00001" summary="creation tables">
       <created>1634396041454</created>
@@ -133,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634585024128</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add BibliothequeSpringCloudConfig.properties">
+      <created>1634585307823</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1634585307823</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +165,8 @@
     <MESSAGE value="creation tables" />
     <MESSAGE value="entites + dao" />
     <MESSAGE value="config-server-repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="config-server-repo" />
+    <MESSAGE value="add BibliothequeSpringCloudConfig.properties" />
+    <MESSAGE value="premier test config externalisee" />
+    <option name="LAST_COMMIT_MESSAGE" value="premier test config externalisee" />
   </component>
 </project>
