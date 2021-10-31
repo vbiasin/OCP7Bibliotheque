@@ -69,6 +69,12 @@
           <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.28" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.12.5" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.12.5" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-actuator:2.5.5" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-actuator-autoconfigure:2.5.5" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-actuator:2.5.5" />
+          <element id="library" level="project" name="Maven: io.micrometer:micrometer-core:1.7.4" />
+          <element id="library" level="project" name="Maven: org.hdrhistogram:HdrHistogram:2.1.12" />
+          <element id="library" level="project" name="Maven: org.latencyutils:LatencyUtils:2.0.3" />
         </element>
       </element>
       <element id="directory" name="META-INF">

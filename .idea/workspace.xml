@@ -5,7 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="582d5dfb-db13-41f6-9b23-1fbde8eebe54" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeConfigServer_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeConfigServer_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_12_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_12_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_addons_reactor_extra_3_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_2_5_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_2_5_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_5_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/src/main/java/com/ocp7bibliotheque/bibliothequeconfigserver/BibliothequeConfigServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/src/main/java/com/ocp7bibliotheque/bibliothequeconfigserver/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/src/test/java/com/ocp7bibliotheque/bibliothequeconfigserver/BibliothequeConfigServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeEureka_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeEureka_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeSpringCloudConfig_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeSpringCloudConfig_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeEureka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeEureka/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeEureka/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeEureka/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/src/main/java/com/ocp7bibliotheque/bibliothequespringcloudconfig/BibliothequeSpringCloudConfigApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/src/main/java/com/ocp7bibliotheque/bibliothequespringcloudconfig/BibliothequeSpringCloudConfigApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server-repo/BibliothequeEureka.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repo/BibliothequeEureka.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server-repo/BibliothequeWeb.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repo/BibliothequeWeb.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +74,15 @@
     </option>
   </component>
   <component name="ProjectId" id="1z6IKPRrPaWCuH8Kh99iY3raNkU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -73,7 +114,14 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BibliothequeSpringCloudConfigApplication">
+  <component name="RunManager" selected="Spring Boot.BibliothequeEurekaApplication">
+    <configuration name="BibliothequeConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="BibliothequeConfigServer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequeconfigserver.BibliothequeConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BibliothequeEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="BibliothequeEureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequeeureka.BibliothequeEurekaApplication" />
@@ -123,7 +171,8 @@
       <workItem from="1635056560406" duration="1554000" />
       <workItem from="1635058159606" duration="4351000" />
       <workItem from="1635265906522" duration="2481000" />
-      <workItem from="1635350754044" duration="2603000" />
+      <workItem from="1635350754044" duration="7231000" />
+      <workItem from="1635698033943" duration="3931000" />
     </task>
     <task id="LOCAL-00001" summary="creation tables">
       <created>1634396041454</created>
@@ -167,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635354755308</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Deuxième tentative externalisation des configs 27/10/2021">
+      <created>1635355109089</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1635355109089</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,12 +242,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="creation tables" />
     <MESSAGE value="entites + dao" />
     <MESSAGE value="config-server-repo" />
     <MESSAGE value="add BibliothequeSpringCloudConfig.properties" />
     <MESSAGE value="premier test config externalisee" />
     <MESSAGE value="Deuxième tentative externalisation des configs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deuxième tentative externalisation des configs" />
+    <MESSAGE value="Deuxième tentative externalisation des configs 27/10/2021" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deuxième tentative externalisation des configs 27/10/2021" />
   </component>
 </project>

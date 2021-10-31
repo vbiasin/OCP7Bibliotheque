@@ -13,6 +13,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="BibliothequeConfigServer" target="17" />
       <module name="BibliothequeEureka" target="11" />
       <module name="BibliothequeSpringCloudConfig" target="11" />
       <module name="BibliothequeWeb" target="15" />
@@ -22,6 +23,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BibliothequeConfigServer" options="-parameters" />
       <module name="BibliothequeEureka" options="-parameters" />
       <module name="BibliothequeSpringCloudConfig" options="-parameters" />
       <module name="BibliothequeWeb" options="-parameters" />

@@ -53,12 +53,6 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.12.5" />
           <element id="library" level="project" name="Maven: org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:3.0.4" />
           <element id="library" level="project" name="Maven: org.springframework.cloud:spring-cloud-netflix-eureka-server:3.0.4" />
-          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-actuator:2.5.5" />
-          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-actuator-autoconfigure:2.5.5" />
-          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-actuator:2.5.5" />
-          <element id="library" level="project" name="Maven: io.micrometer:micrometer-core:1.7.4" />
-          <element id="library" level="project" name="Maven: org.hdrhistogram:HdrHistogram:2.1.12" />
-          <element id="library" level="project" name="Maven: org.latencyutils:LatencyUtils:2.0.3" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-freemarker:2.5.5" />
           <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.31" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:5.3.10" />
@@ -112,6 +106,12 @@
           <element id="library" level="project" name="Maven: jakarta.activation:jakarta.activation-api:1.2.2" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.3.10" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.10" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-actuator:2.5.5" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-actuator-autoconfigure:2.5.5" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-actuator:2.5.5" />
+          <element id="library" level="project" name="Maven: io.micrometer:micrometer-core:1.7.4" />
+          <element id="library" level="project" name="Maven: org.hdrhistogram:HdrHistogram:2.1.12" />
+          <element id="library" level="project" name="Maven: org.latencyutils:LatencyUtils:2.0.3" />
         </element>
       </element>
       <element id="directory" name="META-INF">
