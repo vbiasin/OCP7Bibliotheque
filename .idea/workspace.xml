@@ -4,86 +4,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="582d5dfb-db13-41f6-9b23-1fbde8eebe54" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeConfigServer_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeConfigServer_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_12_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_12_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_addons_reactor_extra_3_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_2_5_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_2_5_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_5_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/src/main/java/com/ocp7bibliotheque/bibliothequeconfigserver/BibliothequeConfigServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/src/main/java/com/ocp7bibliotheque/bibliothequeconfigserver/ServletInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeConfigServer/src/test/java/com/ocp7bibliotheque/bibliothequeconfigserver/BibliothequeConfigServerApplicationTests.java" afterDir="false" />
+    <list default="true" id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/config-server-repo/BibliothequeBook.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeEureka_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeEureka_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeSpringCloudConfig_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeSpringCloudConfig_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeWeb_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeWeb_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_5_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeConfigServer/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeConfigServer/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeConfigServer/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeConfigServer/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeConfigServer/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeConfigServer/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeConfigServer/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeConfigServer/src/main/java/com/ocp7bibliotheque/bibliothequeconfigserver/BibliothequeConfigServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeConfigServer/src/main/java/com/ocp7bibliotheque/bibliothequeconfigserver/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeConfigServer/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeConfigServer/src/test/java/com/ocp7bibliotheque/bibliothequeconfigserver/BibliothequeConfigServerApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliothequeEureka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeEureka/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeEureka/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeEureka/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/src/main/java/com/ocp7bibliotheque/bibliothequespringcloudconfig/BibliothequeSpringCloudConfigApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/src/main/java/com/ocp7bibliotheque/bibliothequespringcloudconfig/BibliothequeSpringCloudConfigApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliothequeWeb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/Controllers/BibliothequeWebApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Controllers/BibliothequeWebApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/DAO/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/DAO/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/DAO/ContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/DAO/ContactRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/DAO/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/DAO/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/DAO/LendingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/DAO/LendingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/DAO/LibraryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/DAO/LibraryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/DAO/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/DAO/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/DAO/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/DAO/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/DAO/UserAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/DAO/UserAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/Entites/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Entites/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/Entites/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Entites/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/Entites/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Entites/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/Entites/Lending.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Entites/Lending.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/Entites/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Entites/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/Entites/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Entites/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/Entites/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Entites/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/Entites/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Entites/UserAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/BibliothequeWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/BibliothequeWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/Templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/Templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server-repo/BibliothequeEureka.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repo/BibliothequeEureka.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server-repo/BibliothequeWeb.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repo/BibliothequeWeb.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="JPA Structure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="JPA Structure" value="true" />
-      </map>
-    </option>
-  </component>
-  <component name="ProjectId" id="1z6IKPRrPaWCuH8Kh99iY3raNkU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="20NTdNrZ0aCYF1yYrKzRGqvdx26" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -93,31 +72,30 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/config-server-repo" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/BibliothequeConfigServer" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Projets\JAVA\Projet7\OCP7Bibliotheque\config-server-repo" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Projets\JAVA\Projet7\OCP7Bibliotheque\BibliothequeWeb\src\main\resources\Templates" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.ocp7bibliotheque.bibliothequeweb" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.BibliothequeEurekaApplication">
-    <configuration name="BibliothequeConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="BibliothequeConfigServer" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequeconfigserver.BibliothequeConfigServerApplication" />
+  <component name="RunManager" selected="Spring Boot.BibliothequeWebApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="OCP7BibliothequeWeb" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="OCP7BibliothequeWeb" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BibliothequeBookApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="BibliothequeBook" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequebook.BibliothequeBookApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,6 +103,8 @@
     <configuration name="BibliothequeEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="BibliothequeEureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequeeureka.BibliothequeEurekaApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,6 +112,8 @@
     <configuration name="BibliothequeSpringCloudConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="BibliothequeSpringCloudConfig" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequespringcloudconfig.BibliothequeSpringCloudConfigApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,117 +121,41 @@
     <configuration name="BibliothequeWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="BibliothequeWeb" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequeweb.BibliothequeWebApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BibliothequeEurekaApplication" />
+      <item itemvalue="Spring Boot.BibliothequeSpringCloudConfigApplication" />
+      <item itemvalue="Spring Boot.BibliothequeWebApplication" />
+      <item itemvalue="Spring Boot.BibliothequeBookApplication" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="582d5dfb-db13-41f6-9b23-1fbde8eebe54" name="Changes" comment="" />
-      <created>1633462047665</created>
+      <changelist id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="" />
+      <created>1635884133992</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1633462047665</updated>
-      <workItem from="1633462049547" duration="1654000" />
-      <workItem from="1634069749768" duration="22000" />
-      <workItem from="1634069786539" duration="41000" />
-      <workItem from="1634069842639" duration="866000" />
-      <workItem from="1634070809385" duration="118000" />
-      <workItem from="1634071067174" duration="394000" />
-      <workItem from="1634143532079" duration="5057000" />
-      <workItem from="1634307304565" duration="4375000" />
-      <workItem from="1634394676521" duration="1678000" />
-      <workItem from="1634581281751" duration="797000" />
-      <workItem from="1634584112767" duration="2841000" />
-      <workItem from="1634587070738" duration="1592000" />
-      <workItem from="1634747566180" duration="5473000" />
-      <workItem from="1634911961780" duration="6272000" />
-      <workItem from="1634921279576" duration="893000" />
-      <workItem from="1634995092458" duration="2353000" />
-      <workItem from="1635056560406" duration="1554000" />
-      <workItem from="1635058159606" duration="4351000" />
-      <workItem from="1635265906522" duration="2481000" />
-      <workItem from="1635350754044" duration="7231000" />
-      <workItem from="1635698033943" duration="3931000" />
+      <updated>1635884133992</updated>
+      <workItem from="1635884136731" duration="167000" />
+      <workItem from="1635884325369" duration="34000" />
+      <workItem from="1635884375464" duration="47000" />
+      <workItem from="1635884430681" duration="646000" />
+      <workItem from="1635885100326" duration="173000" />
+      <workItem from="1635885313052" duration="58000" />
+      <workItem from="1635885375428" duration="522000" />
+      <workItem from="1635885920988" duration="1435000" />
+      <workItem from="1635959009780" duration="4549000" />
+      <workItem from="1636488539514" duration="725000" />
     </task>
-    <task id="LOCAL-00001" summary="creation tables">
-      <created>1634396041454</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1634396041454</updated>
-    </task>
-    <task id="LOCAL-00002" summary="entites + dao">
-      <created>1634396279787</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1634396279787</updated>
-    </task>
-    <task id="LOCAL-00003" summary="config-server-repo">
-      <created>1634585024128</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1634585024128</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add BibliothequeSpringCloudConfig.properties">
-      <created>1634585307823</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1634585307823</updated>
-    </task>
-    <task id="LOCAL-00005" summary="premier test config externalisee">
-      <created>1634586319337</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1634586319337</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Deuxième tentative externalisation des configs">
-      <created>1635354755308</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1635354755308</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Deuxième tentative externalisation des configs 27/10/2021">
-      <created>1635355109089</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1635355109089</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="creation tables" />
-    <MESSAGE value="entites + dao" />
-    <MESSAGE value="config-server-repo" />
-    <MESSAGE value="add BibliothequeSpringCloudConfig.properties" />
-    <MESSAGE value="premier test config externalisee" />
-    <MESSAGE value="Deuxième tentative externalisation des configs" />
-    <MESSAGE value="Deuxième tentative externalisation des configs 27/10/2021" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deuxième tentative externalisation des configs 27/10/2021" />
   </component>
 </project>

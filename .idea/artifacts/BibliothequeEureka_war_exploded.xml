@@ -106,6 +106,7 @@
           <element id="library" level="project" name="Maven: jakarta.activation:jakarta.activation-api:1.2.2" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.3.10" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.10" />
+          <element id="library" level="project" name="Maven: org.springframework.cloud:spring-cloud-starter-bootstrap:3.0.4" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-actuator:2.5.5" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-actuator-autoconfigure:2.5.5" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-actuator:2.5.5" />
