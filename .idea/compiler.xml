@@ -14,7 +14,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="BibliothequeBook" target="17" />
+      <module name="BibliothequeBook" target="11" />
       <module name="BibliothequeConfigServer" target="17" />
       <module name="BibliothequeEureka" target="11" />
       <module name="BibliothequeSpringCloudConfig" target="11" />
