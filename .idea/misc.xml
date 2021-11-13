@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/BibliothequeSpringCloudConfig/pom.xml" />
         <option value="$PROJECT_DIR$/OCP7BibliothequeWeb/pom.xml" />
         <option value="$PROJECT_DIR$/BibliothequeBook/pom.xml" />
+        <option value="$PROJECT_DIR$/BibliothequeGateway/pom.xml" />
       </list>
     </option>
   </component>

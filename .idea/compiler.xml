@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="BibliothequeEureka" />
         <module name="BibliothequeSpringCloudConfig" />
+        <module name="BibliothequeGateway" />
         <module name="BibliothequeWeb" />
         <module name="OCP7BibliothequeWeb" />
         <module name="BibliothequeBook" />
@@ -17,6 +18,7 @@
       <module name="BibliothequeBook" target="11" />
       <module name="BibliothequeConfigServer" target="17" />
       <module name="BibliothequeEureka" target="11" />
+      <module name="BibliothequeGateway" target="17" />
       <module name="BibliothequeSpringCloudConfig" target="11" />
       <module name="BibliothequeWeb" target="15" />
       <module name="OCP7Bibliotheque" target="11" />
@@ -28,6 +30,7 @@
       <module name="BibliothequeBook" options="-parameters" />
       <module name="BibliothequeConfigServer" options="-parameters" />
       <module name="BibliothequeEureka" options="-parameters" />
+      <module name="BibliothequeGateway" options="-parameters" />
       <module name="BibliothequeSpringCloudConfig" options="-parameters" />
       <module name="BibliothequeWeb" options="-parameters" />
       <module name="OCP7Bibliotheque" options="-parameters" />
