@@ -22,7 +22,7 @@ public class UserAccount implements Serializable {
     private String mail;
     private String password;
     private Boolean isActive;
-    @ManyToMany(fetch=FetchType.LAZY)
+    @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(
             name = "userAccounts_roles",
             joinColumns = @JoinColumn(name = "userAccount_id"),

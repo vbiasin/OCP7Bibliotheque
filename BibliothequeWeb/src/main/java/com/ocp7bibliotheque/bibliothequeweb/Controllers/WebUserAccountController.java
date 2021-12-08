@@ -38,12 +38,14 @@ public class WebUserAccountController {
     public String login(Model model, String mail, String password) {
         UserAccount userAccount = new UserAccount(mail,password);
         try {
-            userProxy.login(userAccount);
-            return "home";
+           if(userProxy.login(userAccount)==false){
+               return "login";
+           };
+
         } catch (Exception e) {
             model.addAttribute("exception",e.getMessage());
         }
-        return  "login";
+        return  "home";
     }
 
 

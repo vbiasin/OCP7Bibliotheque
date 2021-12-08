@@ -83,13 +83,12 @@ public class UserAccountController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<UserAccount> login(@RequestBody UserAccount userAccount) {
+    public ResponseEntity<Boolean> login(@RequestBody UserAccount userAccount) {
         try {
-            userAccountService.isValid(new UserAccount(userAccount.getMail(),userAccount.getPassword()));
-            return new ResponseEntity<UserAccount>(userAccountService.register(userAccount), HttpStatus.OK);
+            return new ResponseEntity<Boolean>(userAccountService.isValid(userAccount), HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return  new ResponseEntity<UserAccount>(HttpStatus.BAD_REQUEST);
+        return  new ResponseEntity<Boolean>(HttpStatus.BAD_REQUEST);
     }
 }

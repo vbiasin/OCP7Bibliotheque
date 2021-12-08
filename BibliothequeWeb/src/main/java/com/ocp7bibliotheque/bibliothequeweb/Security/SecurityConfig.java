@@ -24,6 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.formLogin().loginPage("/login");
         http.logout();
         http.authorizeRequests().antMatchers("/inscription").anonymous();
+        http.authorizeRequests().antMatchers("/home").hasAuthority("USER");
         http.exceptionHandling().accessDeniedPage("/403");
     }
 
@@ -36,6 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
+
     }
 
 
