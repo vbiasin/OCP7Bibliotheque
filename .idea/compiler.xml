@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="BibliothequeEureka" />
         <module name="BibliothequeSpringCloudConfig" />
-        <module name="BibliothequeGateway" />
         <module name="BibliothequeWeb" />
         <module name="BibliothequeAdministration" />
         <module name="OCP7BibliothequeWeb" />
