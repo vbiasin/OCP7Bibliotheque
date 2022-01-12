@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/DAO/LibraryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/ILibraryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/LibraryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Controllers/WebAdministrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/Templates/administration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Controller/UserAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Controller/UserAccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/DAO/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/DAO/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/UserAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/UserAccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Controllers/WebUserAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Controllers/WebUserAccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Proxies/BibliothequeAdministrationUserProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Proxies/BibliothequeAdministrationUserProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Services/UserServiceDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Services/UserServiceDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/Templates/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/Templates/template.html" afterDir="false" />
-    </list>
+    <list default="true" id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +66,7 @@
       <recent name="com.ocp7bibliotheque.bibliothequebook.Entites" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BibliothequeAdministrationApplication">
+  <component name="RunManager" selected="Spring Boot.BibliothequeWebApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="OCP7BibliothequeWeb" />
       <method v="2">
@@ -203,7 +188,7 @@
       <workItem from="1640193917698" duration="3761000" />
       <workItem from="1640197796365" duration="4407000" />
       <workItem from="1640282699696" duration="2102000" />
-      <workItem from="1642008060637" duration="1208000" />
+      <workItem from="1642008060637" duration="1510000" />
     </task>
     <task id="LOCAL-00001" summary="ajout module bibliothequeBook">
       <created>1636489311528</created>
@@ -275,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639324161976</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Test login">
+      <created>1642009508525</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1642009508525</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +282,8 @@
     <MESSAGE value="ajout module BibliothequeAdministration (avec fichier bootstrap)" />
     <MESSAGE value="Ajout sécurité + suppression module gateway" />
     <MESSAGE value="Test sécurité" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test sécurité" />
+    <MESSAGE value="Test login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
