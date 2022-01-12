@@ -45,12 +45,12 @@ public class UserAccountServiceImpl implements IUserAccountService{
 
     @Override
     public boolean isValid(UserAccount account) throws Exception {
-        Optional<UserAccount> newUserAccount = userAccountRepository.findByMailAndPassword(account.getMail(), account.getPassword());
+        Optional<UserAccount> newUserAccount = userAccountRepository.findByMailAndPassword(account.getMail(),
+                bCryptPasswordEncoder.encode(account.getPassword()));
         if(newUserAccount.isEmpty()) {
             throw new Exception("Login ou mot de passe incorrect!");
         }
-        if(newUserAccount.get().getActive()==false)return false;
-        return true;
+        return newUserAccount.get().getActive();
     }
 
     public BCryptPasswordEncoder bCryptPasswordEncoder()

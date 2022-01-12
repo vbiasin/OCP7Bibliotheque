@@ -17,8 +17,18 @@ public class WebUserAccountController {
     private BibliothequeAdministrationUserProxy userProxy;
 
     @GetMapping("/")
+    public String start() {
+        return "login";
+    }
+
+    @GetMapping("/login")
     public String login() {
         return "login";
+    }
+
+    @GetMapping("/home")
+    public String home() {
+        return "home";
     }
 
     @GetMapping("/inscription")
@@ -35,17 +45,17 @@ public class WebUserAccountController {
     }
 
     @PostMapping("/login")
-    public String login(Model model, String mail, String password) {
-        UserAccount userAccount = new UserAccount(mail,password);
+    public String login(Model model, String username, String password) {
+        UserAccount userAccount = new UserAccount(username,password);
         try {
-           if(userProxy.login(userAccount)==false){
-               return "login";
+           if(!userProxy.gogo(userAccount)){
+               return "redirect:/login";
            };
 
         } catch (Exception e) {
             model.addAttribute("exception",e.getMessage());
         }
-        return  "home";
+        return  "redirect:/home";
     }
 
 

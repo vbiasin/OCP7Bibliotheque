@@ -74,21 +74,21 @@ public class UserAccountController {
         }
         if(test==true) {
             try {
-                return new ResponseEntity<UserAccount>(userAccountService.register(userAccount), HttpStatus.CREATED);
+                return new ResponseEntity<>(userAccountService.register(userAccount), HttpStatus.CREATED);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        return new ResponseEntity<UserAccount>(HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
-    @PostMapping("/login")
-    public ResponseEntity<Boolean> login(@RequestBody UserAccount userAccount) {
+    @PostMapping("/loginBack")
+    public ResponseEntity<Boolean> gogo(@RequestBody UserAccount userAccount) {
         try {
-            return new ResponseEntity<Boolean>(userAccountService.isValid(userAccount), HttpStatus.OK);
+            return new ResponseEntity<>(userAccountService.isValid(userAccount), HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return  new ResponseEntity<Boolean>(HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 }

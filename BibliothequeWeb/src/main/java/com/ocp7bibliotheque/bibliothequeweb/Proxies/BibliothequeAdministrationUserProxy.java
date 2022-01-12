@@ -2,7 +2,6 @@ package com.ocp7bibliotheque.bibliothequeweb.Proxies;
 
 import com.ocp7bibliotheque.bibliothequeweb.Entites.UserAccount;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -10,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface BibliothequeAdministrationUserProxy {
     @PostMapping(value = "/register")
     UserAccount registerUser(@RequestBody UserAccount userAccount);
-    @PostMapping(value = "/login")
-    Boolean login(@RequestBody UserAccount userAccount);
+    @PostMapping(value = "/loginBack")
+    Boolean gogo(@RequestBody UserAccount userAccount);
 }
