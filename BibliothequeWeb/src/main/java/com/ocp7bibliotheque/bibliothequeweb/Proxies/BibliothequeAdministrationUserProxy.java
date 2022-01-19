@@ -10,5 +10,5 @@ public interface BibliothequeAdministrationUserProxy {
     @PostMapping(value = "/register")
     UserAccount registerUser(@RequestBody UserAccount userAccount);
     @PostMapping(value = "/loginBack")
-    Boolean gogo(@RequestBody UserAccount userAccount);
+    Boolean login(@RequestBody UserAccount userAccount);
 }

@@ -83,7 +83,7 @@ public class UserAccountController {
     }
 
     @PostMapping("/loginBack")
-    public ResponseEntity<Boolean> gogo(@RequestBody UserAccount userAccount) {
+    public ResponseEntity<Boolean>login(@RequestBody UserAccount userAccount) {
         try {
             return new ResponseEntity<>(userAccountService.isValid(userAccount), HttpStatus.OK);
         } catch (Exception e) {

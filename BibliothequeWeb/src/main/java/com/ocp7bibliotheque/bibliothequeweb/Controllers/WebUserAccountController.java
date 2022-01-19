@@ -48,7 +48,7 @@ public class WebUserAccountController {
     public String login(Model model, String username, String password) {
         UserAccount userAccount = new UserAccount(username,password);
         try {
-           if(!userProxy.gogo(userAccount)){
+           if(!userProxy.login(userAccount)){
                return "redirect:/login";
            };
 

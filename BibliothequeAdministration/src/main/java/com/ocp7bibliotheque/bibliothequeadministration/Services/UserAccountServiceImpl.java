@@ -5,7 +5,9 @@ import com.ocp7bibliotheque.bibliothequeadministration.DAO.UserAccountRepository
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.Role;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.UserAccount;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,7 +18,13 @@ import java.util.Optional;
 @Transactional
 public class UserAccountServiceImpl implements IUserAccountService{
 
-    BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+    @Bean
+    public PasswordEncoder encoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Autowired
     UserAccountRepository userAccountRepository;
@@ -38,25 +46,27 @@ public class UserAccountServiceImpl implements IUserAccountService{
         roles.add(defaultRole.get());
         roles.add(employeeRole.get());
         roles.add(adminRole.get());
-        account.setPassword(bCryptPasswordEncoder.encode(account.getPassword()));
+        account.setPassword(passwordEncoder.encode(account.getPassword()));
         account.setRoles(roles);
         return userAccountRepository.save(account);
     }
 
     @Override
     public boolean isValid(UserAccount account) throws Exception {
-        Optional<UserAccount> newUserAccount = userAccountRepository.findByMailAndPassword(account.getMail(),
-                bCryptPasswordEncoder.encode(account.getPassword()));
+        String password= passwordEncoder.encode(account.getPassword());
+        System.out.println("mot de passe : " +account.getPassword());
+        Optional<UserAccount> newUserAccount = userAccountRepository.findByMail(account.getMail());
+        String passwordDB=newUserAccount.get().getPassword();
+        System.out.println("mot de passe DB : " +passwordDB);
         if(newUserAccount.isEmpty()) {
-            throw new Exception("Login ou mot de passe incorrect!");
+            throw new Exception("Utilisateur inexistant!");
+        }
+        if (!password.equals(passwordDB)){
+            throw new Exception("Login ou mot de passe incorrect !");
         }
         return newUserAccount.get().getActive();
     }
 
-    public BCryptPasswordEncoder bCryptPasswordEncoder()
-    {
-        return new BCryptPasswordEncoder();
-    }
 
     @Override
     public UserAccount getUserAccount(String mail) throws Exception {
