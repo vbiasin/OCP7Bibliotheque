@@ -22,11 +22,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
-        http.formLogin().loginPage("/login").loginProcessingUrl("/home");// ligne source du problème !!!
-        http.logout();
+        http.formLogin().loginPage("/login").defaultSuccessUrl("/home", true);
         http.authorizeRequests().antMatchers("/inscription","/register","/login").permitAll();
         http.authorizeRequests().antMatchers("/home").hasAuthority("USER");
         http.exceptionHandling().accessDeniedPage("/403");
+        http.logout();
     }
 
     @Bean

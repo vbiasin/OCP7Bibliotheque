@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -19,12 +20,12 @@ import java.util.Optional;
 public class UserAccountServiceImpl implements IUserAccountService{
 
     @Bean
-    public PasswordEncoder encoder() {
+    public  PasswordEncoder encoder() {
         return new BCryptPasswordEncoder();
     }
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+
+    public static PasswordEncoder passwordEncoder =null;
 
     @Autowired
     UserAccountRepository userAccountRepository;
@@ -34,6 +35,17 @@ public class UserAccountServiceImpl implements IUserAccountService{
 
     @Override
     public UserAccount register(UserAccount account) throws Exception {
+        if(Objects.isNull(passwordEncoder)) passwordEncoder=new PasswordEncoder() {
+            @Override
+            public String encode(CharSequence charSequence) {
+                return "123";
+            }
+
+            @Override
+            public boolean matches(CharSequence charSequence, String s) {
+               return true;// return s.equals(charSequence.toString());
+            }
+        };
         Optional<Role> defaultRole = roleRepository.findByName("USER");
         if(defaultRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role USER");
         Optional<Role> employeeRole = roleRepository.findByName("EMPLOYEE");
@@ -55,6 +67,8 @@ public class UserAccountServiceImpl implements IUserAccountService{
     public boolean isValid(UserAccount account) throws Exception {
         String password= passwordEncoder.encode(account.getPassword());
         System.out.println("mot de passe : " +account.getPassword());
+        System.out.println("mot de passe crypté : " +password);
+
         Optional<UserAccount> newUserAccount = userAccountRepository.findByMail(account.getMail());
         String passwordDB=newUserAccount.get().getPassword();
         System.out.println("mot de passe DB : " +passwordDB);

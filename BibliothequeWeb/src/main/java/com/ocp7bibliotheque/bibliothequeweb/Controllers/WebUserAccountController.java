@@ -44,7 +44,7 @@ public class WebUserAccountController {
         return "inscriptionResult";
     }
 
-    @PostMapping("/login")
+ /*   @PostMapping("/login")
     public String login(Model model, String username, String password) {
         UserAccount userAccount = new UserAccount(username,password);
         try {
@@ -56,7 +56,7 @@ public class WebUserAccountController {
             model.addAttribute("exception",e.getMessage());
         }
         return  "redirect:/home";
-    }
+    }*/
 
 
 
