@@ -25,7 +25,7 @@ public class UserAccountServiceImpl implements IUserAccountService{
     }
 
 
-    public static PasswordEncoder passwordEncoder =null;
+     PasswordEncoder passwordEncoder;
 
     @Autowired
     UserAccountRepository userAccountRepository;
