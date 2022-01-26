@@ -35,17 +35,6 @@ public class UserAccountServiceImpl implements IUserAccountService{
 
     @Override
     public UserAccount register(UserAccount account) throws Exception {
-        if(Objects.isNull(passwordEncoder)) passwordEncoder=new PasswordEncoder() {
-            @Override
-            public String encode(CharSequence charSequence) {
-                return "123";
-            }
-
-            @Override
-            public boolean matches(CharSequence charSequence, String s) {
-               return true;// return s.equals(charSequence.toString());
-            }
-        };
         Optional<Role> defaultRole = roleRepository.findByName("USER");
         if(defaultRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role USER");
         Optional<Role> employeeRole = roleRepository.findByName("EMPLOYEE");

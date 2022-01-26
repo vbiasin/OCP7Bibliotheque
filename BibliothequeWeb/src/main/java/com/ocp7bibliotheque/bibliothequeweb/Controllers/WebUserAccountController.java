@@ -44,20 +44,4 @@ public class WebUserAccountController {
         return "inscriptionResult";
     }
 
- /*   @PostMapping("/login")
-    public String login(Model model, String username, String password) {
-        UserAccount userAccount = new UserAccount(username,password);
-        try {
-           if(!userProxy.login(userAccount)){
-               return "redirect:/login";
-           };
-
-        } catch (Exception e) {
-            model.addAttribute("exception",e.getMessage());
-        }
-        return  "redirect:/home";
-    }*/
-
-
-
 }
