@@ -5,27 +5,18 @@ import com.ocp7bibliotheque.bibliothequeadministration.DAO.UserAccountRepository
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.Role;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.UserAccount;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Optional;
 
 @Service
 @Transactional
 public class UserAccountServiceImpl implements IUserAccountService{
 
-    @Bean
-    public  PasswordEncoder encoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-
-     PasswordEncoder passwordEncoder;
+    BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 
     @Autowired
     UserAccountRepository userAccountRepository;
@@ -37,24 +28,24 @@ public class UserAccountServiceImpl implements IUserAccountService{
     public UserAccount register(UserAccount account) throws Exception {
         Optional<Role> defaultRole = roleRepository.findByName("USER");
         if(defaultRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role USER");
-        Optional<Role> employeeRole = roleRepository.findByName("EMPLOYEE");
-        if(employeeRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role EMPLOYEE");
-        Optional<Role> adminRole = roleRepository.findByName("ADMIN");
-        if(adminRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role ADMIN");
+        /*Optional<Role> employeeRole = roleRepository.findByName("EMPLOYEE");
+        if(employeeRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role EMPLOYEE");*/
+        /*Optional<Role> adminRole = roleRepository.findByName("ADMIN");
+        if(adminRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role ADMIN");*/
         Optional<UserAccount> newUser = userAccountRepository.findByMail(account.getMail());
         if(!newUser.isEmpty()) throw new Exception("Un utilisateur avec cette adresse mail existe déjà !");
         ArrayList<Role> roles = new ArrayList<Role>();
         roles.add(defaultRole.get());
-        roles.add(employeeRole.get());
-        roles.add(adminRole.get());
-        account.setPassword(passwordEncoder.encode(account.getPassword()));
+        /*roles.add(employeeRole.get());
+         roles.add(adminRole.get());*/
+        account.setPassword(bCryptPasswordEncoder.encode(account.getPassword()));
         account.setRoles(roles);
         return userAccountRepository.save(account);
     }
 
     @Override
     public boolean isValid(UserAccount account) throws Exception {
-        String password= passwordEncoder.encode(account.getPassword());
+        String password= bCryptPasswordEncoder.encode(account.getPassword());
         System.out.println("mot de passe : " +account.getPassword());
         System.out.println("mot de passe crypté : " +password);
 

@@ -11,6 +11,7 @@ public class Lending implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String status;
+    private boolean isExtensible;
     @OneToOne
     private UserAccount userAccount;
     @OneToMany(mappedBy="lending",fetch=FetchType.LAZY)
@@ -21,6 +22,7 @@ public class Lending implements Serializable {
 
     public Lending(String status, UserAccount userAccount, Collection<Book> books) {
         this.status = status;
+        this.isExtensible=true;
         this.userAccount = userAccount;
         this.books = books;
     }
@@ -55,5 +57,13 @@ public class Lending implements Serializable {
 
     public void setBooks(Collection<Book> books) {
         this.books = books;
+    }
+
+    public boolean isExtensible() {
+        return isExtensible;
+    }
+
+    public void setExtensible(boolean extensible) {
+        isExtensible = extensible;
     }
 }
