@@ -8,9 +8,178 @@
   <title>Administration</title>
 </head>
 <body>
-  <section layout:fragment="content" class="jumbotron" >
-    <p>une page pour la gestion des rôles et des bibliothèques</p>
+<section layout:fragment="content" class="jumbotron">
+  <h1>PAGE D'ADMINISTRATION !!!</h1>
+  <p>IMPORTANT: pour ajouter ou supprimer un rôle, il faut renseigner son identifiant. Le rôle USER est le rôle par défaut et ne peut donc pas être supprimer !</p>
+  <p>1 pour USER</p>
+  <p>2 pour EMPLOYEE</p>
+  <p>3 pour ADMIN</p>
+  <div class="row">
+    <div class="col-6">
+      <div class="card" >
+        <div class="card-body">
+          <h3 class="card-title">Administration</h3>
+          <h4>Ajouter une bibliotheque</h4>
+          <div>
+            <form th:action="@{/bibliothequeNew}" method="post">
+              <div>
+                <label>Nom:</label>
+                <input type="text" name="name" />
+              </div>
+              <div>
+                <label>Adresse:</label>
+                <input type="text" name="address" />
+              </div>
+              <button type="submit">Enregistrer</button>
+            </form>
+            <div th:if="${exception}" th:text="${exception}"></div>
+          </div>
+          <h4>Ajouter un Membre</h4>
+          <div>
+            <form th:action="@{/memberNew}" method="post">
+              <div>
+                <label>Nom:</label>
+                <input type="text" name="lastName" />
+              </div>
+              <div>
+                <label>Prénom:</label>
+                <input type="text" name="firstName" />
+              </div>
+              <div>
+                <label>Mail:</label>
+                <input type="text" name="mail" />
+              </div>
+              <button type="submit">Enregistrer</button>
+            </form>
+            <div th:if="${exception}" th:text="${exception}"></div>
+          </div>
+          <h4>Ajouter un employé</h4>
+          <div>
+            <form th:action="@{/memberNew}" method="post">
+              <div>
+                <label>Nom:</label>
+                <input type="text" name="lastName" />
+              </div>
+              <div>
+                <label>Prénom:</label>
+                <input type="text" name="firstName" />
+              </div>
+              <div>
+                <label>Mail:</label>
+                <input type="text" name="mail" />
+              </div>
+              <div>
+                <label>Numéro de sécurité sociale:</label>
+                <input type="text" name="secuNumber" />
+              </div>
+              <div>
+                <label>Salaire:</label>
+                <input type="number"  step="any" name="salary" />
+              </div>
+              <button type="submit">Enregistrer</button>
+            </form>
+            <div th:if="${exception}" th:text="${exception}"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Rechercher </h3>
+          <h4>Des utilisateurs</h4>
+          <div>
+            <form th:action="@{/searchUsers}" method="post">
+              <div>
+                <label>Mail:</label>
+                <input type="text" name="mail" />
+              </div>
+              <div>
+                <label>Nom:</label>
+                <input type="text" name="lastName" />
+              </div>
+              <div>
+                <label>Prénom:</label>
+                <input type="text" firstName="mail" />
+              </div>
+              <button type="submit">Rechercher</button>
+            </form>
+            <div th:if="${exception}" th:text="${exception}"></div>
+          </div>
+          <h4>Une Bibliotheque</h4>
+          <div>
+            <form th:action="@{/searchBibliotheque}" method="post">
+              <div>
+                <label>Nom:</label>
+                <input type="text" name="name" />
+              </div>
+              <div>
+                <label>Adresse:</label>
+                <input type="text" name="address" />
+              </div>
+              <button type="submit">Rechercher</button>
+            </form>
+            <div th:if="${exception}" th:text="${exception}"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  </section>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Liste utilisateurs</h3>
+      <!--    <table class="table table-striped">
+            <tr>
+              <th>ID</th><th>Titre </th><th>Pays</th><th>Lieu</th><th>Cotation</th><th>Longueur</th><th>nombre de secteurs</th><th>nombre de voies</th><th>Détails</th><th>Taguer</th>
+            </tr>
+            <tr th:each="s:${listSites}">
+              <td th:text= "${s.id}"></td>
+              <td th:text= "${s.title}"></td>
+              <td th:text= "${s.country}"></td>
+              <td th:text= "${s.place}"></td>
+              <td th:text= "${s.cotation}"></td>
+              <td th:text= "${s.length}"></td>
+              <td th:text= "${s.nbSectors}"></td>
+              <td th:text= "${s.nbPaths}"></td>
+              <td ><form th:action="@{/target(idSite=${s.id})}" target="_blank" method="post"><button type="submit"  >Détails</button></form></td>
+              <td  sec:authorize="hasAuthority('ADMIN')"><form th:action="@{/tag(idSite=${s.id})}" method="post"><button type="submit"  >Taguer</button></form></td>
+            </tr>
+          </table>-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Bibliotheque</h3>
+         <!-- <table class="table table-striped">
+            <tr>
+              <th>ID</th><th>Titre </th><th>Pays</th><th>Lieu</th><th>Cotation</th><th>Longueur</th><th>nombre de secteurs</th><th>nombre de voies</th><th>Détails</th><th>Taguer</th>
+            </tr>
+            <tr th:each="s:${listSites}">
+              <td th:text= "${s.id}"></td>
+              <td th:text= "${s.title}"></td>
+              <td th:text= "${s.country}"></td>
+              <td th:text= "${s.place}"></td>
+              <td th:text= "${s.cotation}"></td>
+              <td th:text= "${s.length}"></td>
+              <td th:text= "${s.nbSectors}"></td>
+              <td th:text= "${s.nbPaths}"></td>
+              <td ><form th:action="@{/target(idSite=${s.id})}" target="_blank" method="post"><button type="submit"  >Détails</button></form></td>
+              <td  sec:authorize="hasAuthority('ADMIN')"><form th:action="@{/tag(idSite=${s.id})}" method="post"><button type="submit"  >Taguer</button></form></td>
+            </tr>
+          </table>-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </body>
 </html>

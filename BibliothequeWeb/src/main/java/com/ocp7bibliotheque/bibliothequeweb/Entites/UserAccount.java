@@ -2,15 +2,9 @@ package com.ocp7bibliotheque.bibliothequeweb.Entites;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinTable;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 
 
 @Entity
@@ -19,6 +13,9 @@ public class UserAccount implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    private Date signInDate;
+    @OneToOne
+    private Contact contact;
     private String mail;
     private String password;
     private Boolean isActive;
@@ -35,6 +32,7 @@ public class UserAccount implements Serializable {
     public UserAccount(String mail, String password) {
         this.mail = mail;
         this.password = password;
+        this.signInDate = new Date();
         this.isActive = true;
     }
 
@@ -76,5 +74,21 @@ public class UserAccount implements Serializable {
 
     public void setRoles(Collection<Role> roles) {
         this.roles = roles;
+    }
+
+    public Date getSignInDate() {
+        return signInDate;
+    }
+
+    public void setSignInDate(Date signInDate) {
+        this.signInDate = signInDate;
+    }
+
+    public Contact getContact() {
+        return contact;
+    }
+
+    public void setContact(Contact contact) {
+        this.contact = contact;
     }
 }

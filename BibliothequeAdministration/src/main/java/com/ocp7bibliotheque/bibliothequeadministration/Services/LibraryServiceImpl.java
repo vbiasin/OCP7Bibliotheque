@@ -24,4 +24,5 @@ public class LibraryServiceImpl implements ILibraryService {
         if(!newLibrary.isEmpty()) throw new Exception("Cette Bibliotheque existe déjà !");
         return libraryRepository.save(library);
     }
+
 }

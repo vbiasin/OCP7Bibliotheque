@@ -19,7 +19,6 @@ public class Contact  implements Serializable {
 
 
     public Contact() {
-        super();
     }
 
     public Contact(String lastName, String firstName, String address) {

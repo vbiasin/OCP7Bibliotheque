@@ -4,32 +4,23 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class Employee implements Serializable {
+public class Employee  extends UserAccount implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String secuNumber;
+    private String employeeCode;
     private double salary;
-    @OneToOne
-    private Contact contact;
-    @OneToOne
-    private UserAccount userAccount;
+
 
     public Employee() {
     }
 
-    public Employee(String secuNumber, double salary) {
-        this.secuNumber = secuNumber;
+    public Employee(String employeeCode, double salary) {
+        this.employeeCode = employeeCode;
         this.salary = salary;
     }
 
-    public Employee(String secuNumber, double salary, Contact contact, UserAccount userAccount) {
-        this.secuNumber = secuNumber;
-        this.salary = salary;
-        this.contact = contact;
-        this.userAccount = userAccount;
-    }
 
     public int getId() {
         return id;
@@ -37,14 +28,6 @@ public class Employee implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getSecuNumber() {
-        return secuNumber;
-    }
-
-    public void setSecuNumber(String secuNumber) {
-        this.secuNumber = secuNumber;
     }
 
     public double getSalary() {
@@ -55,19 +38,12 @@ public class Employee implements Serializable {
         this.salary = salary;
     }
 
-    public Contact getContact() {
-        return contact;
+
+    public String getEmployeeCode() {
+        return employeeCode;
     }
 
-    public void setContact(Contact contact) {
-        this.contact = contact;
-    }
-
-    public UserAccount getUserAccount() {
-        return userAccount;
-    }
-
-    public void setUserAccount(UserAccount userAccount) {
-        this.userAccount = userAccount;
+    public void setEmployeeCode(String employeeCode) {
+        this.employeeCode = employeeCode;
     }
 }
