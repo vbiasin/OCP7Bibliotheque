@@ -34,43 +34,16 @@
             </form>
             <div th:if="${exception}" th:text="${exception}"></div>
           </div>
-          <h4>Ajouter un Membre</h4>
-          <div>
-            <form th:action="@{/memberNew}" method="post">
-              <div>
-                <label>Nom:</label>
-                <input type="text" name="lastName" />
-              </div>
-              <div>
-                <label>Prénom:</label>
-                <input type="text" name="firstName" />
-              </div>
-              <div>
-                <label>Mail:</label>
-                <input type="text" name="mail" />
-              </div>
-              <button type="submit">Enregistrer</button>
-            </form>
-            <div th:if="${exception}" th:text="${exception}"></div>
-          </div>
           <h4>Ajouter un employé</h4>
           <div>
             <form th:action="@{/memberNew}" method="post">
               <div>
-                <label>Nom:</label>
-                <input type="text" name="lastName" />
-              </div>
-              <div>
-                <label>Prénom:</label>
-                <input type="text" name="firstName" />
-              </div>
-              <div>
                 <label>Mail:</label>
                 <input type="text" name="mail" />
               </div>
               <div>
-                <label>Numéro de sécurité sociale:</label>
-                <input type="text" name="secuNumber" />
+                <label>Code employé:</label>
+                <input type="text" name="employeeCode" />
               </div>
               <div>
                 <label>Salaire:</label>
