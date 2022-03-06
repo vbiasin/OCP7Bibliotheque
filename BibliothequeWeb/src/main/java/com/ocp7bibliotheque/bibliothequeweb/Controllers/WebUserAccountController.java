@@ -40,7 +40,6 @@ public class WebUserAccountController {
     public String inscriptionForm( String mail, String password) {
         UserAccount userAccount = new UserAccount(mail,password);
         UserAccount userAccountSaved = userProxy.registerUser(userAccount);
-        //if (Objects.isNull(userAccountSaved))
         return "inscriptionResult";
     }
 

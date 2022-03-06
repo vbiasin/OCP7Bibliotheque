@@ -4,13 +4,15 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class Employee  extends UserAccount implements Serializable {
+public class Employee  implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String employeeCode;
     private double salary;
+    @OneToOne
+    private UserAccount userAccount;
 
 
     public Employee() {
@@ -45,5 +47,13 @@ public class Employee  extends UserAccount implements Serializable {
 
     public void setEmployeeCode(String employeeCode) {
         this.employeeCode = employeeCode;
+    }
+
+    public UserAccount getUserAccount() {
+        return userAccount;
+    }
+
+    public void setUserAccount(UserAccount userAccount) {
+        this.userAccount = userAccount;
     }
 }
