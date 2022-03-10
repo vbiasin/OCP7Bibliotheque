@@ -4,8 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="">
+    <list default="true" id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="Test recherche utilisateur + ajout role">
+      <change afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Controller/AdministrationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/DTO/RoleDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/DTO/UserAccountDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/DTO/RoleDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/DTO/UserAccountDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/DTO/RoleDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/DTO/UserAccountDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Controller/ContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/DAO/UserAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/DAO/UserAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/IUserAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/IUserAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/LibraryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/LibraryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/UserAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/UserAccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Controllers/WebAdministrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Controllers/WebAdministrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Proxies/BibliothequeAdministrationUserProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Proxies/BibliothequeAdministrationUserProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/Templates/administration.html" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/Templates/administration.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +85,7 @@
       <recent name="com.ocp7bibliotheque.bibliothequebook.Entites" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BibliothequeWebApplication">
+  <component name="RunManager" selected="Spring Boot.BibliothequeAdministrationApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="OCP7BibliothequeWeb" />
       <method v="2">
@@ -205,7 +221,10 @@
       <workItem from="1645988658929" duration="2130000" />
       <workItem from="1646468290243" duration="625000" />
       <workItem from="1646548739649" duration="788000" />
-      <workItem from="1646549554682" duration="1299000" />
+      <workItem from="1646549554682" duration="4128000" />
+      <workItem from="1646592222002" duration="3565000" />
+      <workItem from="1646848174701" duration="10236000" />
+      <workItem from="1646942196109" duration="2472000" />
     </task>
     <task id="LOCAL-00001" summary="ajout module bibliothequeBook">
       <created>1636489311528</created>
@@ -368,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646550675183</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="modif employee&#10;ajout DTO et ContactDTO&#10;Test création de BDD + ajout contact">
+      <created>1646550959740</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1646550959740</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,8 +423,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Controller/ContactController.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="2" />
+          <line>27</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

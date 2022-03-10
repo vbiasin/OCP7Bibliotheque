@@ -1,6 +1,7 @@
 package com.ocp7bibliotheque.bibliothequeadministration.Services;
 
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.UserAccount;
+import org.springframework.data.domain.Page;
 
 public interface IUserAccountService {
 
@@ -8,5 +9,6 @@ public interface IUserAccountService {
     public boolean isValid(UserAccount account) throws Exception;
     public UserAccount getUserAccount(String mail) throws Exception;
     public void removeUserAccount(int idUserAccount) throws Exception;
+    public Page<UserAccount> searchUserAccount(String mail, String lastName, String firstName, int pages, int size) throws Exception;
 
 }

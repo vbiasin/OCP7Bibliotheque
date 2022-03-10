@@ -21,7 +21,7 @@
           <h3 class="card-title">Administration</h3>
           <h4>Ajouter une bibliotheque</h4>
           <div>
-            <form th:action="@{/bibliothequeNew}" method="post">
+            <form th:action="@{/addLibrary}" method="post">
               <div>
                 <label>Nom:</label>
                 <input type="text" name="name" />
@@ -36,7 +36,7 @@
           </div>
           <h4>Ajouter un employé</h4>
           <div>
-            <form th:action="@{/memberNew}" method="post">
+            <form th:action="@{/addEmployee}" method="post">
               <div>
                 <label>Mail:</label>
                 <input type="text" name="mail" />
@@ -62,7 +62,7 @@
           <h3 class="card-title">Rechercher </h3>
           <h4>Des utilisateurs</h4>
           <div>
-            <form th:action="@{/searchUsers}" method="post">
+            <form th:action="@{/searchUserAccount}" method="post">
               <div>
                 <label>Mail:</label>
                 <input type="text" name="mail" />
@@ -73,7 +73,7 @@
               </div>
               <div>
                 <label>Prénom:</label>
-                <input type="text" firstName="mail" />
+                <input type="text" firstName=firstName" />
               </div>
               <button type="submit">Rechercher</button>
             </form>
@@ -104,23 +104,30 @@
       <div class="card">
         <div class="card-body">
           <h3 class="card-title">Liste utilisateurs</h3>
-      <!--    <table class="table table-striped">
+           <table class="table table-striped">
             <tr>
-              <th>ID</th><th>Titre </th><th>Pays</th><th>Lieu</th><th>Cotation</th><th>Longueur</th><th>nombre de secteurs</th><th>nombre de voies</th><th>Détails</th><th>Taguer</th>
+              <th>ID</th><th>Mail </th><th>Nom</th><th>Prénom</th><th>Rôles</th><th>Ajouter Rôle</th><th>Supprimer Rôle</th>
             </tr>
-            <tr th:each="s:${listSites}">
-              <td th:text= "${s.id}"></td>
-              <td th:text= "${s.title}"></td>
-              <td th:text= "${s.country}"></td>
-              <td th:text= "${s.place}"></td>
-              <td th:text= "${s.cotation}"></td>
-              <td th:text= "${s.length}"></td>
-              <td th:text= "${s.nbSectors}"></td>
-              <td th:text= "${s.nbPaths}"></td>
-              <td ><form th:action="@{/target(idSite=${s.id})}" target="_blank" method="post"><button type="submit"  >Détails</button></form></td>
-              <td  sec:authorize="hasAuthority('ADMIN')"><form th:action="@{/tag(idSite=${s.id})}" method="post"><button type="submit"  >Taguer</button></form></td>
+            <tr th:each="user:${listUsers}">
+              <td th:text= "${user.id}"></td>
+              <td th:text= "${user.mail}"></td>
+              <td th:text= "${user.contact.lastName}"></td>
+              <td th:text= "${user.contact.firstName}"></td>
+              <td th:text= "${user.roles}"></td>
+             <td ><form th:action="@{/addRole}" method="post">
+             <div>
+                <label>IDRole:</label>
+                <input type="number"  step="any" name="idRole" />
+              </div>
+              <button type="submit"  >Ajouter</button></form></td>
+              <td ><form th:action="@{/removeRole}" method="post">
+             <div>
+                <label>IDRole:</label>
+                <input type="number"  step="any" name="idRole" />
+              </div>
+              <button type="submit"  >Supprimer</button></form></td>
             </tr>
-          </table>-->
+          </table>
 
         </div>
       </div>

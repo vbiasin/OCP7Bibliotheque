@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ContactController {
 
     @Autowired
-    IContactService contactService;
+    private IContactService contactService;
 
     @Autowired
     private IUserAccountService userAccountService;
@@ -24,9 +24,7 @@ public class ContactController {
 
     @PostMapping("/addContactBack")
     public ResponseEntity<Contact> addContact(@RequestBody ContactDTO contactDTO) throws Exception {
-        System.out.println("Mail : " + contactDTO.getMail());
         UserAccount userAccount = userAccountService.getUserAccount(contactDTO.getMail());
-        System.out.println("ID : " + userAccount.getId());
         try {
             return new ResponseEntity<>(contactService.addContact(userAccount.getId(), contactDTO.getContact()), HttpStatus.OK);
         } catch (Exception e) {

@@ -3,9 +3,14 @@ package com.ocp7bibliotheque.bibliothequeadministration.Services;
 import com.ocp7bibliotheque.bibliothequeadministration.DAO.LibraryRepository;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.Library;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
+
+@Service
+@Transactional
 public class LibraryServiceImpl implements ILibraryService {
 
     @Autowired

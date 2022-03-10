@@ -5,6 +5,8 @@ import com.ocp7bibliotheque.bibliothequeadministration.DAO.UserAccountRepository
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.Role;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.UserAccount;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,14 +32,14 @@ public class UserAccountServiceImpl implements IUserAccountService{
         if(defaultRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role USER");
         Optional<Role> employeeRole = roleRepository.findByName("EMPLOYEE");
         if(employeeRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role EMPLOYEE");
-        Optional<Role> adminRole = roleRepository.findByName("ADMIN");
-        if(adminRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role ADMIN");
+       /* Optional<Role> adminRole = roleRepository.findByName("ADMIN");
+        if(adminRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role ADMIN");*/
         Optional<UserAccount> newUser = userAccountRepository.findByMail(account.getMail());
         if(!newUser.isEmpty()) throw new Exception("Un utilisateur avec cette adresse mail existe déjà !");
         ArrayList<Role> roles = new ArrayList<Role>();
         roles.add(defaultRole.get());
         roles.add(employeeRole.get());
-        roles.add(adminRole.get());
+//        roles.add(adminRole.get());
         account.setPassword(bCryptPasswordEncoder.encode(account.getPassword()));
         account.setRoles(roles);
         return userAccountRepository.save(account);
@@ -74,5 +76,10 @@ public class UserAccountServiceImpl implements IUserAccountService{
         Optional<UserAccount> account = userAccountRepository.findById(idUserAccount);
         if(account.isEmpty()) throw new Exception("Le compte utilisateur n'existe pas !");
         userAccountRepository.delete(account.get());
+    }
+
+    @Override
+    public Page<UserAccount> searchUserAccount(String mail, String lastName, String firstName, int pages, int size) throws Exception {
+        return userAccountRepository.searchUserAccount(mail, lastName,firstName, PageRequest.of(pages,size));
     }
 }
