@@ -55,13 +55,13 @@ public class WebAdministrationController {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        return "Administration";
+        return "redirect:/Administration";
     }
 
     @PostMapping("/removeRole")
     public String removeRole(@RequestParam String userAccountMail,@RequestParam int idRole) {
         RoleDTO roleDTO = new RoleDTO(userAccountMail,idRole);
         userProxy.removeRole(roleDTO);
-        return  "administration";
+        return  "redirect:/administration";
     }
 }

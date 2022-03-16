@@ -10,8 +10,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.Optional;
 
 @Service
@@ -32,14 +32,79 @@ public class UserAccountServiceImpl implements IUserAccountService{
         if(defaultRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role USER");
         Optional<Role> employeeRole = roleRepository.findByName("EMPLOYEE");
         if(employeeRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role EMPLOYEE");
-        Optional<Role> adminRole = roleRepository.findByName("ADMIN");
-        if(adminRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role ADMIN");
+        /*Optional<Role> adminRole = roleRepository.findByName("ADMIN");
+        if(adminRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role ADMIN");*/
         Optional<UserAccount> newUser = userAccountRepository.findByMail(account.getMail());
         if(!newUser.isEmpty()) throw new Exception("Un utilisateur avec cette adresse mail existe déjà !");
-        ArrayList<Role> roles = new ArrayList<Role>();
+        Collection<Role> roles = new Collection<>() {
+            @Override
+            public int size() {
+                return 0;
+            }
+
+            @Override
+            public boolean isEmpty() {
+                return false;
+            }
+
+            @Override
+            public boolean contains(Object o) {
+                return false;
+            }
+
+            @Override
+            public Iterator<Role> iterator() {
+                return null;
+            }
+
+            @Override
+            public Object[] toArray() {
+                return new Object[0];
+            }
+
+            @Override
+            public <T> T[] toArray(T[] a) {
+                return null;
+            }
+
+            @Override
+            public boolean add(Role role) {
+                return false;
+            }
+
+            @Override
+            public boolean remove(Object o) {
+                return false;
+            }
+
+            @Override
+            public boolean containsAll(Collection<?> c) {
+                return false;
+            }
+
+            @Override
+            public boolean addAll(Collection<? extends Role> c) {
+                return false;
+            }
+
+            @Override
+            public boolean removeAll(Collection<?> c) {
+                return false;
+            }
+
+            @Override
+            public boolean retainAll(Collection<?> c) {
+                return false;
+            }
+
+            @Override
+            public void clear() {
+
+            }
+        };
         roles.add(defaultRole.get());
         roles.add(employeeRole.get());
-        roles.add(adminRole.get());
+        //roles.add(adminRole.get());
         account.setPassword(bCryptPasswordEncoder.encode(account.getPassword()));
         account.setRoles(roles);
         return userAccountRepository.save(account);
