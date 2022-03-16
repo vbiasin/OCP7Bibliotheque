@@ -14,8 +14,8 @@ public interface UserAccountRepository extends JpaRepository<UserAccount, Intege
     public Optional<UserAccount> findByMail(String mail);
     public Optional<UserAccount> findByMailAndPassword(String mail, String password);
     @Query("SELECT user from UserAccount user where (:mail is null or LOWER(user.mail) LIKE %:mail%) "
-            + "and (:lastName is null or LOWER(user.contact.lastName) LIKE %:lastName%)"
-            +"and (:firstName is null or LOWER(user.contact.firstName) LIKE %:firstName%)")
+            + "or (:lastName is null or LOWER(user.contact.lastName) LIKE %:lastName%)"
+            +"or (:firstName is null or LOWER(user.contact.firstName) LIKE %:firstName%)")
 
     public Page<UserAccount> searchUserAccount(@Param("mail")String mail, @Param("lastName")String lastName, @Param("firstName") String firstname, Pageable pageable);
 }

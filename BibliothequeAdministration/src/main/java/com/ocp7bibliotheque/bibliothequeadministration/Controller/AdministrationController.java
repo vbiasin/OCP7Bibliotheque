@@ -62,5 +62,16 @@ public class AdministrationController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
+    @PostMapping("/removeRoleBack")
+    public ResponseEntity<String> removeRole(@RequestBody RoleDTO roleDTO) throws Exception {
+        try {
+            roleService.removeRoleFromUserAccount(roleDTO.getMail(),roleDTO.getIdRole());
+            return new ResponseEntity<>("", HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+
 
 }

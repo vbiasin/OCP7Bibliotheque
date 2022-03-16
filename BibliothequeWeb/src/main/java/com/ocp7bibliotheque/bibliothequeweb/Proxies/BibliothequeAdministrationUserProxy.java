@@ -32,4 +32,7 @@ public interface BibliothequeAdministrationUserProxy {
     @PostMapping(value = "/searchUserAccountBack")
     Page<UserAccount> searchUserAccount(@RequestBody UserAccountDTO userAccountDTO);
 
+    @PostMapping(value = "/removeRoleBack")
+    void removeRole(@RequestBody RoleDTO roleDTO);
+
 }

@@ -28,8 +28,13 @@ public class RoleServiceImpl implements IRoleService{
         if(userAccount.isEmpty()) throw new Exception("L'utilisateur spécifié n'existe pas !");
         Optional<Role> role = roleRepository.findById(idRole);
         if(role.isEmpty()) throw new Exception("Aucun rôle ne correspond à cet identifiant !");
-        ArrayList<Role> roles = (ArrayList<Role>) userAccount.get().getRoles();
-        roles.add(role.get());
+        Collection<Role> roles =  userAccount.get().getRoles();
+        // vérifier si rôle existe déjà
+        boolean check = false;
+        for (Role roleInCollection : roles) {
+            if(roleInCollection.getName().equals(role.get().getName())) check=true;
+        }
+        if(!check) roles.add(role.get());
         userAccount.get().setRoles(roles);
         userRepository.saveAndFlush(userAccount.get());
     }
@@ -40,8 +45,10 @@ public class RoleServiceImpl implements IRoleService{
         if(userAccount.isEmpty()) throw new Exception("L'utilisateur spécifié n'existe pas !");
         Optional<Role> role = roleRepository.findById(idRole);
         if(role.isEmpty()) throw new Exception("Aucun rôle ne correspond à cet identifiant !");
-        ArrayList<Role> roles = (ArrayList<Role>) userAccount.get().getRoles();
-        roles.remove(role.get());
+        Collection<Role> roles =  userAccount.get().getRoles();
+        for (Role roleInCollection : roles) {
+            if(roleInCollection.getName().equals(role.get().getName())) roles.remove(roleInCollection);
+        }
         userAccount.get().setRoles(roles);
         userRepository.saveAndFlush(userAccount.get());
     }

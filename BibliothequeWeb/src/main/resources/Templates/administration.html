@@ -73,7 +73,7 @@
               </div>
               <div>
                 <label>Prénom:</label>
-                <input type="text" firstName=firstName" />
+                <input type="text" firstName="firstName" />
               </div>
               <button type="submit">Rechercher</button>
             </form>
@@ -114,13 +114,13 @@
               <td th:text= "${user.contact.lastName}"></td>
               <td th:text= "${user.contact.firstName}"></td>
               <td th:text= "${user.roles}"></td>
-             <td ><form th:action="@{/addRole}" method="post">
+             <td ><form th:action="@{/addRole(userAccountMail=${user.mail})}" method="post">
              <div>
                 <label>IDRole:</label>
                 <input type="number"  step="any" name="idRole" />
               </div>
               <button type="submit"  >Ajouter</button></form></td>
-              <td ><form th:action="@{/removeRole}" method="post">
+              <td ><form th:action="@{/removeRole(userAccountMail=${user.mail})}" method="post">
              <div>
                 <label>IDRole:</label>
                 <input type="number"  step="any" name="idRole" />
@@ -128,7 +128,13 @@
               <button type="submit"  >Supprimer</button></form></td>
             </tr>
           </table>
-
+          <div class="container">
+            <ul class="nav nav-pills">
+              <li th:each="p,status:${pagesListTopos}">
+                <a th:href="@{/administration(pageList=${status.index})}" th:text="${status.index}"></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
