@@ -55,7 +55,7 @@ public class AdministrationController {
     }
 
     @PostMapping("/searchUserAccountBack")
-    public ResponseEntity<List<UserAccount>> searchUserAccount(@RequestBody UserAccountDTO userAccountDTO) throws Exception {
+    public ResponseEntity<Page<UserAccount>> searchUserAccount(@RequestBody UserAccountDTO userAccountDTO) throws Exception {
         try {
             return new ResponseEntity<>(userAccountService.searchUserAccount(userAccountDTO.getMail(),userAccountDTO.getLastName(), userAccountDTO.getFirstName(),userAccountDTO.getPages(),userAccountDTO.getSize()), HttpStatus.OK);
         } catch (Exception e) {
