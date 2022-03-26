@@ -3,6 +3,8 @@ package com.ocp7bibliotheque.bibliothequeadministration.Services;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.UserAccount;
 import org.springframework.data.domain.Page;
 
+import java.util.List;
+
 public interface IUserAccountService {
 
     public UserAccount register(UserAccount account) throws Exception;

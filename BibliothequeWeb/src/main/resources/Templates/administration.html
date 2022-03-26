@@ -73,7 +73,7 @@
               </div>
               <div>
                 <label>Prénom:</label>
-                <input type="text" firstName="firstName" />
+                <input type="text" name="firstName" />
               </div>
               <button type="submit">Rechercher</button>
             </form>
@@ -108,7 +108,7 @@
             <tr>
               <th>ID</th><th>Mail </th><th>Nom</th><th>Prénom</th><th>Rôles</th><th>Ajouter Rôle</th><th>Supprimer Rôle</th>
             </tr>
-            <tr th:each="user:${listUsers}">
+            <tr th:each="user:${pageListUsers}">
               <td th:text= "${user.id}"></td>
               <td th:text= "${user.mail}"></td>
               <td th:text= "${user.contact.lastName}"></td>
@@ -130,7 +130,7 @@
           </table>
           <div class="container">
             <ul class="nav nav-pills">
-              <li th:each="p,status:${pagesListTopos}">
+              <li th:each="p,status:${pageListUsers}">
                 <a th:href="@{/administration(pageList=${status.index})}" th:text="${status.index}"></a>
               </li>
             </ul>

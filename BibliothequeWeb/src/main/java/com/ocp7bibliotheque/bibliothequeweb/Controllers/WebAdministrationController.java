@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 public class WebAdministrationController {
 
@@ -40,28 +42,31 @@ public class WebAdministrationController {
     }
 
     @PostMapping("/searchUserAccount")
-    public String searchUserAccount(Model model, String mail, String lastName, String firstName, @RequestParam(name="pageList", defaultValue="0") int pageList,@RequestParam(name="size",defaultValue="30") int size) throws Exception {
+    public String searchUserAccount( @RequestParam(name="mail", defaultValue="toto@exemple.com") String mail,@RequestParam(name="lastName", defaultValue="azerty") String lastName,
+                                    @RequestParam(name="firstName", defaultValue="qwerty") String firstName, @RequestParam(name="pageList", defaultValue="0") int pageList,@RequestParam(name="size",defaultValue="30") int size,Model model) throws Exception {
+
+        System.out.println("mail: "+mail+" Nom: "+lastName+" Prénom: "+firstName+" PageList: "+ pageList+" Size: "+size);
         UserAccountDTO userAccountDTO = new UserAccountDTO(mail,lastName,firstName,pageList,size);
-        Page<UserAccount>pageListUsers;
+        Page<UserAccount> pageListUsers;
         try {
 
             pageListUsers = userProxy.searchUserAccount(userAccountDTO);
             model.addAttribute("listUsers",pageListUsers.getContent());
-            int []pagesListSites = new int[pageListUsers.getTotalPages()];
-            model.addAttribute("pagesListSites",pagesListSites);
+            int []pagesListUsers = new int[pageListUsers.getTotalPages()];
+           model.addAttribute("pageListUsers",pageListUsers);
 
 
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        return "redirect:/Administration";
+        return "administration";
     }
 
     @PostMapping("/removeRole")
     public String removeRole(@RequestParam String userAccountMail,@RequestParam int idRole) {
         RoleDTO roleDTO = new RoleDTO(userAccountMail,idRole);
         userProxy.removeRole(roleDTO);
-        return  "redirect:/administration";
+        return  "administration";
     }
 }

@@ -1,7 +1,9 @@
 package com.ocp7bibliotheque.bibliothequeadministration.Services;
 
+import com.ocp7bibliotheque.bibliothequeadministration.DAO.ContactRepository;
 import com.ocp7bibliotheque.bibliothequeadministration.DAO.RoleRepository;
 import com.ocp7bibliotheque.bibliothequeadministration.DAO.UserAccountRepository;
+import com.ocp7bibliotheque.bibliothequeadministration.Entites.Contact;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.Role;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.UserAccount;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +12,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Optional;
+
+import java.util.*;
 
 @Service
 @Transactional
@@ -26,85 +27,23 @@ public class UserAccountServiceImpl implements IUserAccountService{
     @Autowired
     RoleRepository roleRepository;
 
+    @Autowired
+    ContactRepository contactRepository;
+
     @Override
     public UserAccount register(UserAccount account) throws Exception {
         Optional<Role> defaultRole = roleRepository.findByName("USER");
         if(defaultRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role USER");
         Optional<Role> employeeRole = roleRepository.findByName("EMPLOYEE");
         if(employeeRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role EMPLOYEE");
-        Optional<Role> adminRole = roleRepository.findByName("ADMIN");
-        if(adminRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role ADMIN");
+        /*Optional<Role> adminRole = roleRepository.findByName("ADMIN");
+        if(adminRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role ADMIN");*/
         Optional<UserAccount> newUser = userAccountRepository.findByMail(account.getMail());
         if(!newUser.isEmpty()) throw new Exception("Un utilisateur avec cette adresse mail existe déjà !");
-        Collection<Role> roles = new Collection<>() {
-            @Override
-            public int size() {
-                return 0;
-            }
-
-            @Override
-            public boolean isEmpty() {
-                return false;
-            }
-
-            @Override
-            public boolean contains(Object o) {
-                return false;
-            }
-
-            @Override
-            public Iterator<Role> iterator() {
-                return null;
-            }
-
-            @Override
-            public Object[] toArray() {
-                return new Object[0];
-            }
-
-            @Override
-            public <T> T[] toArray(T[] a) {
-                return null;
-            }
-
-            @Override
-            public boolean add(Role role) {
-                return false;
-            }
-
-            @Override
-            public boolean remove(Object o) {
-                return false;
-            }
-
-            @Override
-            public boolean containsAll(Collection<?> c) {
-                return false;
-            }
-
-            @Override
-            public boolean addAll(Collection<? extends Role> c) {
-                return false;
-            }
-
-            @Override
-            public boolean removeAll(Collection<?> c) {
-                return false;
-            }
-
-            @Override
-            public boolean retainAll(Collection<?> c) {
-                return false;
-            }
-
-            @Override
-            public void clear() {
-
-            }
-        };
+        Collection<Role> roles = new ArrayList<Role>();
         roles.add(defaultRole.get());
         roles.add(employeeRole.get());
-        roles.add(adminRole.get());
+        //roles.add(adminRole.get());
         account.setPassword(bCryptPasswordEncoder.encode(account.getPassword()));
         account.setRoles(roles);
         return userAccountRepository.save(account);
@@ -145,6 +84,30 @@ public class UserAccountServiceImpl implements IUserAccountService{
 
     @Override
     public Page<UserAccount> searchUserAccount(String mail, String lastName, String firstName, int pages, int size) throws Exception {
-        return userAccountRepository.searchUserAccount(mail, lastName,firstName, PageRequest.of(pages,size));
+       List<Contact> contacts = contactRepository.findByLastNameOrFirstName(lastName, firstName);
+       List<Contact> noDoublonContacts = new ArrayList<>();
+       for( Contact contact: contacts ){
+          if(noDoublonContacts.isEmpty()) noDoublonContacts.add(contact);
+           for (Contact noDoublonContact:noDoublonContacts) {
+               if (!contact.getFirstName().equals(noDoublonContact.getFirstName()) || !contact.getLastName().equals(noDoublonContact.getLastName())){
+                   noDoublonContacts.add(contact);
+               }
+           }
+        }
+       UserAccount userAccount = userAccountRepository.findByMail(mail).get();
+       List<UserAccount> result = new ArrayList<>();
+       result.add(userAccount);
+        for (Contact contact: noDoublonContacts) {
+            UserAccount currentUserAccount = userAccountRepository.findByContact(contact).get();
+            if (!currentUserAccount.getMail().equals(mail))
+            result.add(currentUserAccount);
+        }
+
+        for (UserAccount userAccountCheck:result) {
+            System.out.println(userAccountCheck.getMail());
+        }
+
+       Page<UserAccount> resultPage = (Page<UserAccount>) result;
+        return resultPage;
     }
 }

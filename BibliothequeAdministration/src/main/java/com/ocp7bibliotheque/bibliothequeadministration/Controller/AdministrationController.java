@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 
 @RestController
 public class AdministrationController {
@@ -53,7 +55,7 @@ public class AdministrationController {
     }
 
     @PostMapping("/searchUserAccountBack")
-    public ResponseEntity<Page<UserAccount>> searchUserAccount(@RequestBody UserAccountDTO userAccountDTO) throws Exception {
+    public ResponseEntity<List<UserAccount>> searchUserAccount(@RequestBody UserAccountDTO userAccountDTO) throws Exception {
         try {
             return new ResponseEntity<>(userAccountService.searchUserAccount(userAccountDTO.getMail(),userAccountDTO.getLastName(), userAccountDTO.getFirstName(),userAccountDTO.getPages(),userAccountDTO.getSize()), HttpStatus.OK);
         } catch (Exception e) {
