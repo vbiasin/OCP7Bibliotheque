@@ -1,5 +1,6 @@
 package com.ocp7bibliotheque.bibliothequeweb.Controllers;
 
+import com.ocp7bibliotheque.bibliothequeweb.DTO.LibraryDTO;
 import com.ocp7bibliotheque.bibliothequeweb.DTO.RoleDTO;
 import com.ocp7bibliotheque.bibliothequeweb.DTO.UserAccountDTO;
 import com.ocp7bibliotheque.bibliothequeweb.Entites.Library;
@@ -12,8 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.util.List;
 
 @Controller
 public class WebAdministrationController {
@@ -43,7 +42,7 @@ public class WebAdministrationController {
 
     @PostMapping("/searchUserAccount")
     public String searchUserAccount( @RequestParam(name="mail", defaultValue="toto@exemple.com") String mail,@RequestParam(name="lastName", defaultValue="azerty") String lastName,
-                                    @RequestParam(name="firstName", defaultValue="qwerty") String firstName, @RequestParam(name="pageList", defaultValue="0") int pageList,@RequestParam(name="size",defaultValue="30") int size,Model model) throws Exception {
+                                    @RequestParam(name="firstName", defaultValue="qwerty") String firstName, @RequestParam(name="pageList", defaultValue="0") int pageList,@RequestParam(name="size",defaultValue="10") int size,Model model) throws Exception {
 
         System.out.println("mail: "+mail+" Nom: "+lastName+" Prénom: "+firstName+" PageList: "+ pageList+" Size: "+size);
         UserAccountDTO userAccountDTO = new UserAccountDTO(mail,lastName,firstName,pageList,size);
@@ -53,7 +52,7 @@ public class WebAdministrationController {
             pageListUsers = userProxy.searchUserAccount(userAccountDTO);
             model.addAttribute("listUsers",pageListUsers.getContent());
             int []pagesListUsers = new int[pageListUsers.getTotalPages()];
-           model.addAttribute("pageListUsers",pageListUsers);
+            model.addAttribute("pageListUsers",pageListUsers);
 
 
         } catch (Exception e) {
@@ -68,5 +67,27 @@ public class WebAdministrationController {
         RoleDTO roleDTO = new RoleDTO(userAccountMail,idRole);
         userProxy.removeRole(roleDTO);
         return  "administration";
+    }
+
+    @PostMapping("/searchLibrary")
+    public String searchLibrary( @RequestParam(name="name", defaultValue="nomBibliotheque") String name,@RequestParam(name="address", defaultValue="adresseBibliotheque") String address,
+                                   @RequestParam(name="pageList", defaultValue="0") int pageList,@RequestParam(name="size",defaultValue="10") int size,Model model) throws Exception {
+
+
+       LibraryDTO libraryDTO = new LibraryDTO(name,address,pageList,size);
+        Page<Library> pageListLibraries;
+        try {
+
+            pageListLibraries = userProxy.searchLibrary(libraryDTO);
+            model.addAttribute("listLibrairies",pageListLibraries.getContent());
+            int []pagesListLibraries = new int[pageListLibraries.getTotalPages()];
+            model.addAttribute("pageListLibraries",pageListLibraries);
+
+
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return "administration";
     }
 }

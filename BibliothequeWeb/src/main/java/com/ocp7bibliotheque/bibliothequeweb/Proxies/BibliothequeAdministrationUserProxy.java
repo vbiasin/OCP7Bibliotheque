@@ -1,6 +1,7 @@
 package com.ocp7bibliotheque.bibliothequeweb.Proxies;
 
 import com.ocp7bibliotheque.bibliothequeweb.DTO.ContactDTO;
+import com.ocp7bibliotheque.bibliothequeweb.DTO.LibraryDTO;
 import com.ocp7bibliotheque.bibliothequeweb.DTO.RoleDTO;
 import com.ocp7bibliotheque.bibliothequeweb.DTO.UserAccountDTO;
 import com.ocp7bibliotheque.bibliothequeweb.Entites.Contact;
@@ -36,5 +37,8 @@ public interface BibliothequeAdministrationUserProxy {
 
     @PostMapping(value = "/removeRoleBack")
     void removeRole(@RequestBody RoleDTO roleDTO);
+
+    @PostMapping(value = "/searchLibraryBack")
+    Page<Library> searchLibrary(@RequestBody LibraryDTO libraryDTO);
 
 }

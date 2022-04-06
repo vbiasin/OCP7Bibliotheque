@@ -8,7 +8,9 @@ import com.ocp7bibliotheque.bibliothequeadministration.Entites.Role;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.UserAccount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -86,28 +88,42 @@ public class UserAccountServiceImpl implements IUserAccountService{
     public Page<UserAccount> searchUserAccount(String mail, String lastName, String firstName, int pages, int size) throws Exception {
        List<Contact> contacts = contactRepository.findByLastNameOrFirstName(lastName, firstName);
        List<Contact> noDoublonContacts = new ArrayList<>();
-       for( Contact contact: contacts ){
-          if(noDoublonContacts.isEmpty()) noDoublonContacts.add(contact);
-           for (Contact noDoublonContact:noDoublonContacts) {
-               if (!contact.getFirstName().equals(noDoublonContact.getFirstName()) || !contact.getLastName().equals(noDoublonContact.getLastName())){
-                   noDoublonContacts.add(contact);
+       if(!contacts.isEmpty()){
+           for( Contact contact: contacts ){
+               if(noDoublonContacts.isEmpty()) noDoublonContacts.add(contact);
+               boolean doublon = true;
+               for (Contact noDoublonContact:noDoublonContacts) {
+                   if (!contact.getFirstName().equals(noDoublonContact.getFirstName()) || !contact.getLastName().equals(noDoublonContact.getLastName())){
+                       doublon=false;
+                   }
                }
+               if (!doublon) noDoublonContacts.add(contact);
            }
-        }
-       UserAccount userAccount = userAccountRepository.findByMail(mail).get();
-       List<UserAccount> result = new ArrayList<>();
-       result.add(userAccount);
-        for (Contact contact: noDoublonContacts) {
-            UserAccount currentUserAccount = userAccountRepository.findByContact(contact).get();
-            if (!currentUserAccount.getMail().equals(mail))
-            result.add(currentUserAccount);
-        }
+       }
 
-        for (UserAccount userAccountCheck:result) {
-            System.out.println(userAccountCheck.getMail());
-        }
+        List<UserAccount> result = new ArrayList<>();
 
-       Page<UserAccount> resultPage = (Page<UserAccount>) result;
+       if(!mail.equals("toto@exemple.com")){
+           UserAccount userAccount = userAccountRepository.findByMail(mail).get();
+           result.add(userAccount);
+       }
+
+       if(noDoublonContacts.isEmpty() && result.isEmpty()){
+            result = userAccountRepository.findAll();
+       }
+       else{
+
+           for (Contact contact: noDoublonContacts) {
+               UserAccount currentUserAccount = userAccountRepository.findByContact(contact).get();
+               if (!currentUserAccount.getMail().equals(mail))
+                   result.add(currentUserAccount);
+           }
+       }
+
+        Pageable pageable = PageRequest.of(0, size);
+
+        Page<UserAccount> resultPage = new PageImpl<>(result, pageable, (result.size())%size);
+
         return resultPage;
     }
 }

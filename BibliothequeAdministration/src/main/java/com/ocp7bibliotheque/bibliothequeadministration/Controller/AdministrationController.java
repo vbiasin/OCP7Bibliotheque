@@ -1,6 +1,7 @@
 package com.ocp7bibliotheque.bibliothequeadministration.Controller;
 
 
+import com.ocp7bibliotheque.bibliothequeadministration.DTO.LibraryDTO;
 import com.ocp7bibliotheque.bibliothequeadministration.DTO.RoleDTO;
 import com.ocp7bibliotheque.bibliothequeadministration.DTO.UserAccountDTO;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.Library;
@@ -69,6 +70,16 @@ public class AdministrationController {
         try {
             roleService.removeRoleFromUserAccount(roleDTO.getMail(),roleDTO.getIdRole());
             return new ResponseEntity<>("", HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+
+    @PostMapping("/searchLibraryBack")
+    public ResponseEntity<Page<Library>> searchLibrary(@RequestBody LibraryDTO libraryDTO) throws Exception {
+        try {
+            return new ResponseEntity<>(libraryService.searchLibrary(libraryDTO.getName(),libraryDTO.getAddress(),libraryDTO.getPages(),libraryDTO.getSize()), HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
         }
