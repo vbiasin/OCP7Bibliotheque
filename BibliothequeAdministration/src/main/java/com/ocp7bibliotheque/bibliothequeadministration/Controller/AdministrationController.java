@@ -86,5 +86,15 @@ public class AdministrationController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
+    @PostMapping("/removeUserAccountBack")
+    public ResponseEntity<String> addLibrary(@RequestBody int idUserAccount) throws Exception {
+        try {
+            userAccountService.removeUserAccount(idUserAccount);
+            return new ResponseEntity<String>("", HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
 
 }

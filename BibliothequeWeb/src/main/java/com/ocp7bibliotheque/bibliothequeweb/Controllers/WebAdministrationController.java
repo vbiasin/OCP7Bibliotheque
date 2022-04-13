@@ -90,4 +90,10 @@ public class WebAdministrationController {
         }
         return "administration";
     }
+
+    @PostMapping("/removeUserAccount")
+    public String removeUserAccount(@RequestParam int idUserAccount) {
+        userProxy.removeUserAccount(idUserAccount);
+        return "redirect:administration";
+    }
 }

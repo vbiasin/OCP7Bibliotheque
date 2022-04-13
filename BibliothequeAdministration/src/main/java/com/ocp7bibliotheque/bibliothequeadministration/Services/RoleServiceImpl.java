@@ -47,7 +47,10 @@ public class RoleServiceImpl implements IRoleService{
         if(role.isEmpty()) throw new Exception("Aucun rôle ne correspond à cet identifiant !");
         Collection<Role> roles =  userAccount.get().getRoles();
         for (Role roleInCollection : roles) {
-            if(roleInCollection.getName().equals(role.get().getName())) roles.remove(roleInCollection);
+            if(roleInCollection.getName().equals(role.get().getName())){
+                roles.remove(roleInCollection);
+                break;
+            }
         }
         userAccount.get().setRoles(roles);
         userRepository.saveAndFlush(userAccount.get());
