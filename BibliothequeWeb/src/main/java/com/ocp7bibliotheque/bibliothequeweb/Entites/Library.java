@@ -12,12 +12,6 @@ public class Library implements Serializable {
     private int id;
     private String name;
     private String address;
-    @ManyToMany(fetch=FetchType.LAZY)
-    @JoinTable(
-            name = "libraries_books",
-            joinColumns = @JoinColumn(name = "library_id"),
-            inverseJoinColumns = @JoinColumn(name = "book_id"))
-    private Collection<Book> books;
 
     public Library() {
     }
