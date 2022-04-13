@@ -10,8 +10,8 @@ public class Book implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @ManyToMany(mappedBy = "books")
-    private Collection<Library> libraries;
+    @OneToOne
+    private Library library;
     private Boolean isAvailable;
     private Date publicationDate;
     private String resume;
@@ -41,12 +41,20 @@ public class Book implements Serializable {
         this.id = id;
     }
 
-    public Collection<Library> getLibraries() {
-        return libraries;
+    public Library getLibrary() {
+        return library;
     }
 
-    public void setLibraries(Collection<Library> libraries) {
-        this.libraries = libraries;
+    public void setLibrary(Library library) {
+        this.library = library;
+    }
+
+    public Lending getLending() {
+        return lending;
+    }
+
+    public void setLending(Lending lending) {
+        this.lending = lending;
     }
 
     public Boolean getAvailable() {

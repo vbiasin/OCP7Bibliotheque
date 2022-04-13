@@ -10,6 +10,7 @@
 <body>
 <section layout:fragment="content" class="jumbotron">
   <h1>PAGE D'ADMINISTRATION !!!</h1>
+  <p>Note: il n'est pas possible d'ajouter un employé la fonction doit être implémentée !</p>
   <p>IMPORTANT: pour ajouter ou supprimer un rôle, il faut renseigner son identifiant. Le rôle USER est le rôle par défaut et ne peut donc pas être supprimer !</p>
   <p>1 pour USER</p>
   <p>2 pour EMPLOYEE</p>
@@ -36,7 +37,7 @@
           </div>
           <h4>Ajouter un employé</h4>
           <div>
-            <form th:action="@{/addEmployee}" method="post">
+            <form th:action="@{/addEmployee}"method="post">
               <div>
                 <label>Mail:</label>
                 <input type="text" name="mail" />
