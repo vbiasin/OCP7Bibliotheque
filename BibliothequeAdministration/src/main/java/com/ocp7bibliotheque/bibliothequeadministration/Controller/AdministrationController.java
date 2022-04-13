@@ -87,9 +87,20 @@ public class AdministrationController {
     }
 
     @PostMapping("/removeUserAccountBack")
-    public ResponseEntity<String> addLibrary(@RequestBody int idUserAccount) throws Exception {
+    public ResponseEntity<String>removeUserAccount(@RequestBody int idUserAccount) throws Exception {
         try {
             userAccountService.removeUserAccount(idUserAccount);
+            return new ResponseEntity<String>("", HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+
+    @PostMapping("/removeLibraryBack")
+    public ResponseEntity<String> removeLibrary(@RequestBody int idLibrary) throws Exception {
+        try {
+            libraryService.removeLibrary(idLibrary);
             return new ResponseEntity<String>("", HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();

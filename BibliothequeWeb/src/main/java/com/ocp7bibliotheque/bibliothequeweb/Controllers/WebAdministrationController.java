@@ -96,4 +96,11 @@ public class WebAdministrationController {
         userProxy.removeUserAccount(idUserAccount);
         return "redirect:administration";
     }
+
+    @PostMapping("/removeLibrary")
+    public String removeLibrary(@RequestParam int idLibrary) {
+        userProxy.removeLibrary(idLibrary);
+        return "redirect:administration";
+    }
+
 }

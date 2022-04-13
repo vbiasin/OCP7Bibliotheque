@@ -44,5 +44,8 @@ public interface BibliothequeAdministrationUserProxy {
     @PostMapping(value = "/removeUserAccountBack")
     void removeUserAccount(@RequestBody int idUserAccount);
 
+    @PostMapping(value = "/removeLibraryBack")
+    void removeLibrary(@RequestBody int idLibrary);
+
 
 }
