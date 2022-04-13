@@ -15,15 +15,27 @@
             <div class="card" sec:authorize="hasAuthority('EMPLOYEE')">
                 <div class="card-body">
                     <h3 class="card-title">Ajouter un livre</h3>
-                   <!-- <form th:action="@{/livreNew}" method="post">
+                    <form th:action="@{/addBook}" method="post">
                         <div>
                             <label>Titre:</label>
                             <input type="text" name="title" />
                         </div>
-
+                        <div>
+                            <label>Auteur:</label>
+                            <input type="text" name="author" />
+                        </div>
+                        <div>
+                            <label>Résumé:</label>
+                            <input type="text" name="resume" />
+                        </div>
+                        <div>
+                            <label>Nombre d'exemplaires:</label>
+                            <input type="number"  step="any" name="idRole" />
+                        </div>
                         <button type="submit">Enregistrer</button>
                     </form>
-                    <div th:if="${exception}" th:text="${exception}"></div>-->
+                    <div th:if="${exception}" th:text="${exception}"></div>
+                    <p>Note: seul le nombre d'exemplaires pourra être modifié par la suite !</p>
                 </div>
             </div>
         </div>
@@ -31,10 +43,18 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="card-title">Rechercher un Livre</h3>
-                    <!--<form th:action="@{/searchLivre}" method="post">
+                    <form th:action="@{/searchBook}" method="post">
+                        <div>
+                            <label>Titre:</label>
+                            <input type="text" name="title" />
+                        </div>
+                        <div>
+                            <label>Auteur:</label>
+                            <input type="text" name="author" />
+                        </div>
                         <button type="submit">Rechercher</button>
                     </form>
-                    <div th:if="${exception}" th:text="${exception}"></div>-->
+                    <div th:if="${exception}" th:text="${exception}"></div>
                 </div>
             </div>
         </div>

@@ -12,8 +12,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import java.util.List;
-
 
 @FeignClient(name = "BibliothequeAdministration", url = "localhost:8280")
 public interface BibliothequeAdministrationUserProxy {
