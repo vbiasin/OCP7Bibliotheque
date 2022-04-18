@@ -28,7 +28,7 @@ public class WebAdministrationController {
     @PostMapping("/addLibrary")
     public String library(String name, String address) {
         Library library = new Library(name, address);
-        Library librarySaved = userProxy.addLibrary(library);
+        userProxy.addLibrary(library);
         return  "administration";
     }
 

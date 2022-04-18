@@ -2,6 +2,7 @@ package com.ocp7bibliotheque.bibliothequebook.Entites;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Collection;
 
 @Entity
@@ -11,20 +12,24 @@ public class Lending implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String status;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
     private boolean isExtensible;
     @OneToOne
     private UserAccount userAccount;
-    @OneToMany(mappedBy="lending",fetch=FetchType.LAZY)
-    private Collection<Book> books;
+    @OneToOne
+    private Book book;
 
     public Lending() {
     }
 
-    public Lending(String status, UserAccount userAccount, Collection<Book> books) {
+    public Lending(String status, UserAccount userAccount, Book book, LocalDateTime startDate) {
         this.status = status;
         this.isExtensible=true;
         this.userAccount = userAccount;
-        this.books = books;
+        this.book = book;
+        this.startDate = startDate.now();
+        this.endDate = startDate.plusDays(28);
     }
 
     public int getId() {
@@ -51,12 +56,12 @@ public class Lending implements Serializable {
         this.userAccount = userAccount;
     }
 
-    public Collection<Book> getBooks() {
-        return books;
+    public Book getBook() {
+        return book;
     }
 
-    public void setBooks(Collection<Book> books) {
-        this.books = books;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
     public boolean isExtensible() {
@@ -65,5 +70,21 @@ public class Lending implements Serializable {
 
     public void setExtensible(boolean extensible) {
         isExtensible = extensible;
+    }
+
+    public LocalDateTime getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(LocalDateTime startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDateTime getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDateTime endDate) {
+        this.endDate = endDate;
     }
 }

@@ -30,12 +30,18 @@
                         </div>
                         <div>
                             <label>Nombre d'exemplaires:</label>
-                            <input type="number"  step="any" name="idRole" />
+                            <input type="number"  step="any" name="numberExemplar" />
+                        </div>
+                        <div>
+                            <label>ID Bibliothèque:</label>
+                            <input type="number"  step="any" name="idLibrary" />
                         </div>
                         <button type="submit">Enregistrer</button>
                     </form>
                     <div th:if="${exception}" th:text="${exception}"></div>
                     <p>Note: seul le nombre d'exemplaires pourra être modifié par la suite !</p>
+                    <p>1 pour la médiathèque Roi Soleil</p>
+                    <p>2 pour la médiathèque Georges Pompidou</p>
                 </div>
             </div>
         </div>
