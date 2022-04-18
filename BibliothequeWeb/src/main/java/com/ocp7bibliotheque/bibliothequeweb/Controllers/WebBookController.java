@@ -24,7 +24,7 @@ public class WebBookController {
     public String book(String resume, String title, String author, int numberExemplar, int idLibrary) {
         Book book = new Book(new Date(),resume,title,author,numberExemplar);
         BookDTo bookDTO = new BookDTo(idLibrary, book);
-        bookProxy.addBook(bookDTO);
+        //bookProxy.addBook(bookDTO);
         return  "book";
     }
 

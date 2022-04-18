@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/DTO/BookDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/DTO/BookDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/DTO/BookDTo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Entites/Lending.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Entites/Lending.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/UserAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/UserAccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Entites/Lending.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Entites/Lending.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Controllers/WebAdministrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Controllers/WebAdministrationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Controllers/WebBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Controllers/WebBookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Entites/Lending.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Entites/Lending.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Proxies/BibliothequeBookProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Proxies/BibliothequeBookProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Proxies/BibliothequeLendingProxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/Templates/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/Templates/book.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +73,7 @@
       <recent name="com.ocp7bibliotheque.bibliothequebook.Entites" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BibliothequeSpringCloudConfigApplication">
+  <component name="RunManager" selected="Spring Boot.BibliothequeWebApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="OCP7BibliothequeWeb" />
       <method v="2">
@@ -242,7 +231,7 @@
       <workItem from="1649860572088" duration="12713000" />
       <workItem from="1649875443955" duration="52000" />
       <workItem from="1649875519161" duration="2427000" />
-      <workItem from="1650294141399" duration="1379000" />
+      <workItem from="1650294141399" duration="1702000" />
     </task>
     <task id="LOCAL-00001" summary="ajout module bibliothequeBook">
       <created>1636489311528</created>
@@ -503,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649872951604</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Modification structure lending">
+      <created>1650295689914</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1650295689914</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +530,8 @@
     <MESSAGE value="Modification structure entitée Book" />
     <MESSAGE value="Modification structure entitée Book + Library" />
     <MESSAGE value="Ajout Proxies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout Proxies" />
+    <MESSAGE value="Modification structure lending" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification structure lending" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
