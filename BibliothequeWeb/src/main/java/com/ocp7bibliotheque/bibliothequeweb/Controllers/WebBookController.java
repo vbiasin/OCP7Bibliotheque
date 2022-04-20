@@ -1,5 +1,5 @@
 package com.ocp7bibliotheque.bibliothequeweb.Controllers;
-import com.ocp7bibliotheque.bibliothequeweb.DTO.BookDTo;
+import com.ocp7bibliotheque.bibliothequeweb.DTO.BookDTO;
 import com.ocp7bibliotheque.bibliothequeweb.Entites.Book;
 import com.ocp7bibliotheque.bibliothequeweb.Proxies.BibliothequeBookProxy;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +23,15 @@ public class WebBookController {
     @PostMapping("/addBook")
     public String book(String resume, String title, String author, int numberExemplar, int idLibrary) {
         Book book = new Book(new Date(),resume,title,author,numberExemplar);
-        BookDTo bookDTO = new BookDTo(idLibrary, book);
-        //bookProxy.addBook(bookDTO);
+        BookDTO bookDTO = new BookDTO(idLibrary, book);
+        bookProxy.addBook(bookDTO);
+        return  "book";
+    }
+
+    @PostMapping("/modifyBook")
+    public String book(int idBook, int numberExemplar) {
+        BookDTO bookDTO = new BookDTO(idBook, numberExemplar);
+        bookProxy.modifyBook(bookDTO);
         return  "book";
     }
 

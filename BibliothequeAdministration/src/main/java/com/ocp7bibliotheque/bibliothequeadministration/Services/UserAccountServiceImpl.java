@@ -6,6 +6,7 @@ import com.ocp7bibliotheque.bibliothequeadministration.DAO.UserAccountRepository
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.Contact;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.Role;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.UserAccount;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -36,16 +37,16 @@ public class UserAccountServiceImpl implements IUserAccountService{
     public UserAccount register(UserAccount account) throws Exception {
         Optional<Role> defaultRole = roleRepository.findByName("USER");
         if(defaultRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role USER");
-        Optional<Role> employeeRole = roleRepository.findByName("EMPLOYEE");
+        /*Optional<Role> employeeRole = roleRepository.findByName("EMPLOYEE");
         if(employeeRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role EMPLOYEE");
         Optional<Role> adminRole = roleRepository.findByName("ADMIN");
-        if(adminRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role ADMIN");
+        if(adminRole.isEmpty()) throw new Exception("Erreur lors de l'affectation du Role ADMIN");*/
         Optional<UserAccount> newUser = userAccountRepository.findByMail(account.getMail());
         if(!newUser.isEmpty()) throw new Exception("Un utilisateur avec cette adresse mail existe déjà !");
         Collection<Role> roles = new ArrayList<Role>();
         roles.add(defaultRole.get());
-        roles.add(employeeRole.get());
-        roles.add(adminRole.get());
+        /*roles.add(employeeRole.get());
+        roles.add(adminRole.get());*/
         account.setPassword(bCryptPasswordEncoder.encode(account.getPassword()));
         account.setRoles(roles);
         return userAccountRepository.save(account);
@@ -102,6 +103,7 @@ public class UserAccountServiceImpl implements IUserAccountService{
        }
 
         List<UserAccount> result = new ArrayList<>();
+        List<UserAccount> resultWithContact = new ArrayList<>();
 
        if(!mail.equals("toto@exemple.com")){
            UserAccount userAccount = userAccountRepository.findByMail(mail).get();
@@ -110,6 +112,12 @@ public class UserAccountServiceImpl implements IUserAccountService{
 
        if(noDoublonContacts.isEmpty() && result.isEmpty()){
             result = userAccountRepository.findAll();
+            for (UserAccount userAccount:result){
+                if(userAccount.getContact()!=null) {
+                    resultWithContact.add(userAccount);
+                }
+            }
+            result=resultWithContact;
        }
        else{
 

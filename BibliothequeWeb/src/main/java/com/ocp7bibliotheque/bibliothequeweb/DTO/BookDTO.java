@@ -1,6 +1,6 @@
-package com.ocp7bibliotheque.bibliothequeadministration.DTO;
+package com.ocp7bibliotheque.bibliothequeweb.DTO;
 
-import com.ocp7bibliotheque.bibliothequeadministration.Entites.Book;
+import com.ocp7bibliotheque.bibliothequeweb.Entites.Book;
 
 import java.io.Serializable;
 
@@ -99,3 +99,4 @@ public class BookDTO implements Serializable {
         this.size = size;
     }
 }
+
