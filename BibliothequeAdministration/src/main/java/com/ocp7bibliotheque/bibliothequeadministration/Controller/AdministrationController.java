@@ -97,4 +97,14 @@ public class AdministrationController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
+    @PostMapping("/searchLibraryBack")
+    public ResponseEntity<Page<Library>> searchLibrary(@RequestBody LibraryDTO libraryDTO) throws Exception {
+        try {
+            return new ResponseEntity<>(libraryService.searchLibrary(libraryDTO.getName(),libraryDTO.getAddress(),libraryDTO.getPages(),libraryDTO.getSize()), HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+
 }

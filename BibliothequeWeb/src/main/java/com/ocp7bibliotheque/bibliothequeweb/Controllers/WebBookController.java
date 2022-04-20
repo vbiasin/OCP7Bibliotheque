@@ -3,9 +3,15 @@ import com.ocp7bibliotheque.bibliothequeweb.DTO.BookDTO;
 import com.ocp7bibliotheque.bibliothequeweb.Entites.Book;
 import com.ocp7bibliotheque.bibliothequeweb.Proxies.BibliothequeBookProxy;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
 
@@ -17,6 +23,8 @@ public class WebBookController {
 
     @GetMapping("/books")
     public String book() {
+        UserDetails activeUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if(bookProxy.getBookPage(activeUser.getUsername())==false) return "redirect:/contact";
         return "book";
     }
 
@@ -33,6 +41,34 @@ public class WebBookController {
         BookDTO bookDTO = new BookDTO(idBook, numberExemplar);
         bookProxy.modifyBook(bookDTO);
         return  "book";
+    }
+
+    @PostMapping("/removeBook")
+    public String removeRole(@RequestParam int idBook) {
+        bookProxy.removeBook(idBook);
+        return  "book";
+    }
+
+    @PostMapping("/searchBook")
+    public String searchLibrary(@RequestParam(name="title", defaultValue="titreLivre") String title, @RequestParam(name="author", defaultValue="auteurLivre") String author,
+                                @RequestParam(name="pageList", defaultValue="0") int pageList, @RequestParam(name="size",defaultValue="10") int size, Model model) throws Exception {
+
+
+        BookDTO bookDTO = new BookDTO(author,title,pageList,size);
+        Page<Book> pageListBooks;
+        try {
+
+            pageListBooks = bookProxy.searchBook(bookDTO);
+            model.addAttribute("listbooks",pageListBooks.getContent());
+            int []pagesListBooks = new int[pageListBooks.getTotalPages()];
+            model.addAttribute("pageListBooks",pageListBooks);
+
+
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return "book";
     }
 
 }

@@ -3,19 +3,31 @@ package com.ocp7bibliotheque.bibliothequebook.Controller;
 import com.ocp7bibliotheque.bibliothequebook.DTO.BookDTO;
 import com.ocp7bibliotheque.bibliothequebook.Entites.Book;
 import com.ocp7bibliotheque.bibliothequebook.Services.IBookService;
+import com.ocp7bibliotheque.bibliothequebook.Services.IUserAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class BookController {
 
     @Autowired
     private IBookService bookService;
+
+    @Autowired
+    private IUserAccountService userAccountService;
+
+    @GetMapping("/booksBack")
+    public ResponseEntity<Boolean> checkActiveUserContact(@RequestParam("activeUsername")  String activeUserName) throws Exception {
+        try {
+            return new ResponseEntity<Boolean>(userAccountService.checkUserAccountContact(activeUserName), HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
 
 
     @PostMapping("/addBookBack")
@@ -50,7 +62,7 @@ public class BookController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
-    @PostMapping("/searchLibraryBack")
+    @PostMapping("/searchBookBack")
     public ResponseEntity<Page<Book>> searchLibrary(@RequestBody BookDTO bookDTO) throws Exception {
         try {
             return new ResponseEntity<>(bookService.searchBook(bookDTO.getTitle(),bookDTO.getAuthor(),bookDTO.getPages(),bookDTO.getSize()), HttpStatus.OK);

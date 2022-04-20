@@ -5,23 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BibliothequeGateway/BibliothequeGateway.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Controllers/WebLendingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeBook_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeBook_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/DAO/UserAccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/IUserAccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/UserAccountServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Controller/AdministrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Controller/AdministrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/DTO/BookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/DTO/BookDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/UserAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Services/UserAccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeBook/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBook/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/DAO/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/DAO/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/DAO/LibraryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/DAO/LibraryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/DTO/BookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/DTO/BookDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/IBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/IBookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Controllers/WebBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Controllers/WebBookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/DTO/BookDTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/DTO/BookDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Proxies/BibliothequeBookProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/java/com/ocp7bibliotheque/bibliothequeweb/Proxies/BibliothequeBookProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/Templates/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeWeb/src/main/resources/Templates/book.html" afterDir="false" />
     </list>
@@ -34,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -93,7 +83,7 @@
       <recent name="com.ocp7bibliotheque.bibliothequebook.Entites" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BibliothequeSpringCloudConfigApplication">
+  <component name="RunManager" selected="Spring Boot.BibliothequeAdministrationApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="OCP7BibliothequeWeb" />
       <method v="2">
@@ -241,7 +231,8 @@
       <workItem from="1650351823896" duration="1683000" />
       <workItem from="1650358540555" duration="502000" />
       <workItem from="1650372565394" duration="6717000" />
-      <workItem from="1650432023601" duration="602000" />
+      <workItem from="1650432023601" duration="3977000" />
+      <workItem from="1650436048026" duration="6695000" />
     </task>
     <task id="LOCAL-00001" summary="ajout module bibliothequeBook">
       <created>1636489311528</created>
@@ -516,14 +507,20 @@
       <option name="project" value="LOCAL" />
       <updated>1650295996786</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Test modification et suppression livre">
+      <created>1650432684930</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1650432684930</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ajout module bibliothequeBook" />
     <MESSAGE value="ajout module bibliothequeBook (avec module)" />
     <MESSAGE value="test module bibliothequeBook 10/11/2021" />
     <MESSAGE value="ajout module BibliothequeGateway" />
@@ -548,7 +545,8 @@
     <MESSAGE value="Modification structure entitée Book + Library" />
     <MESSAGE value="Ajout Proxies" />
     <MESSAGE value="Modification structure lending" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification structure lending" />
+    <MESSAGE value="Test modification et suppression livre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test modification et suppression livre" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

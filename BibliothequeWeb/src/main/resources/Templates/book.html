@@ -71,23 +71,38 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="card-title">Liste Livres</h3>
-                    <!--<table class="table table-striped">
+                    <table class="table table-striped">
                         <tr>
-                            <th>ID</th><th>Titre </th><th>Pays</th><th>Lieu</th><th>Cotation</th><th>Longueur</th><th>nombre de secteurs</th><th>nombre de voies</th><th>Détails</th><th>Taguer</th>
+                            <th>ID</th><th>Titre</th><th>Auteur</th><th>Résumé</th><th>Quantité Disponnible</th><th>Bibliotheque</th><th>Adresse</th><th>Emprunter</th><th sec:authorize="hasAuthority('EMPLOYEE')">Modifier</th><th sec:authorize="hasAuthority('EMPLOYEE')">Supprimer</th>
                         </tr>
-                        <tr th:each="s:${listSites}">
-                            <td th:text= "${s.id}"></td>
-                            <td th:text= "${s.title}"></td>
-                            <td th:text= "${s.country}"></td>
-                            <td th:text= "${s.place}"></td>
-                            <td th:text= "${s.cotation}"></td>
-                            <td th:text= "${s.length}"></td>
-                            <td th:text= "${s.nbSectors}"></td>
-                            <td th:text= "${s.nbPaths}"></td>
-                            <td ><form th:action="@{/target(idSite=${s.id})}" target="_blank" method="post"><button type="submit"  >Détails</button></form></td>
-                            <td  sec:authorize="hasAuthority('ADMIN')"><form th:action="@{/tag(idSite=${s.id})}" method="post"><button type="submit"  >Taguer</button></form></td>
+                        <tr th:each="book:${pageListBooks}">
+                            <td th:text= "${book.id}"></td>
+                            <td th:text= "${book.title}"></td>
+                            <td th:text= "${book.author}"></td>
+                            <td th:text= "${book.resume}"></td>
+                            <td th:text= "${book.numberExemplar}"></td>
+                            <td th:text= "${book.library.name}"></td>
+                            <td th:text= "${book.library.address}"></td>
+                            <td><form th:action="@{/borrow(idBook=${book.id})}" method="post"><button type="submit"  >Emprunter</button></form></td>
+                            <td  sec:authorize="hasAuthority('EMPLOYEE')">
+                                <form th:action="@{/modifyBook(idBook=${book.id})}" method="post">
+                                    <div>
+                                        <label>Nombre d'exemplaires:</label>
+                                        <input type="number"  step="any" name="numberExemplar" />
+                                    </div>
+                                    <button type="submit"  >Modifier</button>
+                                </form>
+                            </td>
+                            <td  sec:authorize="hasAuthority('EMPLOYEE')"><form th:action="@{/removeBook(idBook=${book.id})}" method="post"><button type="submit"  >Supprimer</button></form></td>
                         </tr>
-                    </table>-->
+                    </table>
+                    <div class="container">
+                        <ul class="nav nav-pills">
+                            <li th:each="p,status:${pageListBooks}">
+                                <a th:href="@{/books(pageList=${status.index})}" th:text="${status.index}"></a>
+                            </li>
+                        </ul>
+                    </div>
 
                 </div>
             </div>
