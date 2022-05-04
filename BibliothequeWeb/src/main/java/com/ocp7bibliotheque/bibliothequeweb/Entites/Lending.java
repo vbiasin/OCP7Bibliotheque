@@ -23,12 +23,12 @@ public class Lending implements Serializable {
     public Lending() {
     }
 
-    public Lending(String status, UserAccount userAccount, Book book, LocalDateTime startDate) {
-        this.status = status;
+    public Lending(UserAccount userAccount, Book book) {
+        this.status = "en cours";
         this.isExtensible=true;
         this.userAccount = userAccount;
         this.book = book;
-        this.startDate = startDate.now();
+        this.startDate = LocalDateTime.now();
         this.endDate = startDate.plusDays(28);
     }
 
