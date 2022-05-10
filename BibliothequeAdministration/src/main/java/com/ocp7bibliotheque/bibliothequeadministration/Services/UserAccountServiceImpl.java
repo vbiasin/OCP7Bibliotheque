@@ -1,9 +1,11 @@
 package com.ocp7bibliotheque.bibliothequeadministration.Services;
 
 import com.ocp7bibliotheque.bibliothequeadministration.DAO.ContactRepository;
+import com.ocp7bibliotheque.bibliothequeadministration.DAO.LendingRepository;
 import com.ocp7bibliotheque.bibliothequeadministration.DAO.RoleRepository;
 import com.ocp7bibliotheque.bibliothequeadministration.DAO.UserAccountRepository;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.Contact;
+import com.ocp7bibliotheque.bibliothequeadministration.Entites.Lending;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.Role;
 import com.ocp7bibliotheque.bibliothequeadministration.Entites.UserAccount;
 import org.apache.catalina.User;
@@ -32,6 +34,9 @@ public class UserAccountServiceImpl implements IUserAccountService{
 
     @Autowired
     ContactRepository contactRepository;
+
+    @Autowired
+    LendingRepository lendingRepository;
 
     @Override
     public UserAccount register(UserAccount account) throws Exception {
@@ -82,6 +87,11 @@ public class UserAccountServiceImpl implements IUserAccountService{
     public void removeUserAccount(int idUserAccount) throws Exception {
         Optional<UserAccount> account = userAccountRepository.findById(idUserAccount);
         if(account.isEmpty()) throw new Exception("Le compte utilisateur n'existe pas !");
+        List<Lending> listLoans = lendingRepository.findByUserAccount(account.get());
+        for (Lending loan:listLoans
+        ) {
+            lendingRepository.delete(loan);
+        }
         userAccountRepository.delete(account.get());
     }
 

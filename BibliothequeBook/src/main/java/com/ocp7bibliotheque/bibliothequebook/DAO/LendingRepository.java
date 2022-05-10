@@ -1,5 +1,6 @@
 package com.ocp7bibliotheque.bibliothequebook.DAO;
 
+import com.ocp7bibliotheque.bibliothequebook.Entites.Book;
 import com.ocp7bibliotheque.bibliothequebook.Entites.Lending;
 import com.ocp7bibliotheque.bibliothequebook.Entites.UserAccount;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,4 +12,5 @@ public interface LendingRepository extends JpaRepository<Lending,Integer> {
 
     Optional<Lending> findById(int idLending) throws Exception;
     List<Lending> findByUserAccount(UserAccount userAccount) throws Exception;
+    List<Lending> findByBook(Book book) throws Exception;
 }

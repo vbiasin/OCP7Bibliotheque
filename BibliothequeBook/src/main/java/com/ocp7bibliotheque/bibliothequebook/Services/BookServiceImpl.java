@@ -1,8 +1,10 @@
 package com.ocp7bibliotheque.bibliothequebook.Services;
 
 import com.ocp7bibliotheque.bibliothequebook.DAO.BookRepository;
+import com.ocp7bibliotheque.bibliothequebook.DAO.LendingRepository;
 import com.ocp7bibliotheque.bibliothequebook.DAO.LibraryRepository;
 import com.ocp7bibliotheque.bibliothequebook.Entites.Book;
+import com.ocp7bibliotheque.bibliothequebook.Entites.Lending;
 import com.ocp7bibliotheque.bibliothequebook.Entites.Library;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -26,10 +28,18 @@ public class BookServiceImpl implements IBookService {
     @Autowired
     BookRepository bookRepository;
 
+    @Autowired
+    LendingRepository lendingRepository;
+
     @Override
     public void removeBook(int idBook) throws Exception {
         Optional<Book> book = bookRepository.findById(idBook);
         if(book.isEmpty()) throw new Exception ("Ce livre n'existe pas !");
+        List<Lending> listLoans = lendingRepository.findByBook(book.get());
+        for (Lending loan:listLoans
+             ) {
+            lendingRepository.delete(loan);
+        }
         bookRepository.delete(book.get());
     }
 
