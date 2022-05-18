@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="BibliothequeEureka" />
         <module name="BibliothequeSpringCloudConfig" />
+        <module name="BibliothequeBatchMail" />
         <module name="BibliothequeWeb" />
         <module name="BibliothequeAdministration" />
         <module name="OCP7BibliothequeWeb" />
@@ -16,6 +17,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="BibliothequeAdministration" target="11" />
+      <module name="BibliothequeBatchMail" target="11" />
       <module name="BibliothequeBook" target="11" />
       <module name="BibliothequeConfigServer" target="17" />
       <module name="BibliothequeEureka" target="11" />
@@ -29,6 +31,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="BibliothequeAdministration" options="-parameters" />
+      <module name="BibliothequeBatchMail" options="-parameters" />
       <module name="BibliothequeBook" options="-parameters" />
       <module name="BibliothequeConfigServer" options="-parameters" />
       <module name="BibliothequeEureka" options="-parameters" />

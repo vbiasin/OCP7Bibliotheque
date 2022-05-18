@@ -42,5 +42,5 @@ public interface BibliothequeBookProxy {
     Lending extendLoan(@RequestBody int idLending);
 
     @GetMapping(value="/displayLoansBack")
-    List<Lending> displayLoans(@RequestParam("activeUsername")  String activeUsername);
+    List<Lending> displayLoans(@RequestParam("activeUsername") String activeUsername);
 }

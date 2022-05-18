@@ -21,7 +21,7 @@ public class WebLendingController {
     private BibliothequeBookProxy bookProxy;
 
     @GetMapping("/loans")
-    public String loan(@RequestParam("activeUsername")  String activeUserName, Model model) {
+    public String loan( Model model) {
         UserDetails activeUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if(bookProxy.getLendingPage(activeUser.getUsername())==false) return "redirect:/contact";
         try {
@@ -46,7 +46,7 @@ public class WebLendingController {
     @PostMapping("/extendLoan")
     public String extendLoan(@RequestParam int idLending) {
         bookProxy.extendLoan(idLending);
-        return  "loan";
+        return  "redirect:/loan";
     }
 
 
