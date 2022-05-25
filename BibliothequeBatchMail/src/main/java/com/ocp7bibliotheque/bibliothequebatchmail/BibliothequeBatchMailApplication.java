@@ -9,5 +9,6 @@ public class BibliothequeBatchMailApplication {
     public static void main(String[] args) {
         SpringApplication.run(BibliothequeBatchMailApplication.class, args);
     }
+    
 
 }
