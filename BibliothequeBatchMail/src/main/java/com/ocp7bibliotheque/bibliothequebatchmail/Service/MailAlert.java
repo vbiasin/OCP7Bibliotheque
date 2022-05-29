@@ -4,17 +4,19 @@ import com.ocp7bibliotheque.bibliothequebatchmail.DAO.LendingRepository;
 
 import com.ocp7bibliotheque.bibliothequebatchmail.Entites.Lending;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Component
+@Configuration
+@EnableScheduling
 @Service
 @Transactional
 public class MailAlert {
@@ -27,8 +29,6 @@ public class MailAlert {
 
     @Scheduled(fixedRate = 600000)
     public void mailDiffusor(){
-
-        //appel au module BibliothequeBook
         List<Lending> lendings = lendingRepository.findAll() ;
         for (Lending lending:lendings) {
             if(lending.getEndDate().isBefore(LocalDateTime.now())){
@@ -43,10 +43,5 @@ public class MailAlert {
                 this.emailSender.send(message);
             }
         }
-
-
-
-
-
     }
 }

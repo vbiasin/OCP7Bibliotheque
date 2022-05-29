@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/DAO/LendingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Entites/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Entites/Contact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Entites/DAO/LendingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Entites/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Entites/Lending.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Entites/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Entites/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Entites/UserAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Mail/MailConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Mail/MyConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Service/MailAlert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server-repo/BibliothequeBatchMail.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeBatchMail/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBatchMail/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/BibliothequeBatchMailApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/BibliothequeBatchMailApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/DAO/LendingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/DAO/LendingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Entites/DAO/LendingRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Service/MailAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Service/MailAlert.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +28,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="20NTdNrZ0aCYF1yYrKzRGqvdx26" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -254,7 +252,9 @@
       <workItem from="1652199807843" duration="6488000" />
       <workItem from="1652893545500" duration="5728000" />
       <workItem from="1653212824101" duration="41000" />
-      <workItem from="1653493530088" duration="4586000" />
+      <workItem from="1653493530088" duration="4885000" />
+      <workItem from="1653503143898" duration="3856000" />
+      <workItem from="1653803648100" duration="602000" />
     </task>
     <task id="LOCAL-00001" summary="ajout module bibliothequeBook">
       <created>1636489311528</created>
@@ -564,14 +564,20 @@
       <option name="project" value="LOCAL" />
       <updated>1652897082096</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="ajout config module Batch Mail">
+      <created>1653502839766</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1653502839766</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ajout module BibliothequeAdministration (avec fichier bootstrap)" />
     <MESSAGE value="Ajout sécurité + suppression module gateway" />
     <MESSAGE value="Test sécurité" />
     <MESSAGE value="Test login" />
@@ -596,7 +602,8 @@
     <MESSAGE value="Ajout fonctions pour afficher et prolonger prêts" />
     <MESSAGE value="modifs pour les suppressions" />
     <MESSAGE value="ajout module Batch Mail" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout module Batch Mail" />
+    <MESSAGE value="ajout config module Batch Mail" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout config module Batch Mail" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -605,6 +612,11 @@
           <url>file://$PROJECT_DIR$/BibliothequeAdministration/src/main/java/com/ocp7bibliotheque/bibliothequeadministration/Controller/ContactController.java</url>
           <line>27</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Service/MailAlert.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
