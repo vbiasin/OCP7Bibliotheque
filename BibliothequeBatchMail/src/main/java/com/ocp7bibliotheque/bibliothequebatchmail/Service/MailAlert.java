@@ -49,7 +49,7 @@ public class MailAlert {
         return mailSender;
     }
 
-    @Scheduled(fixedRate = 600000)
+    @Scheduled(fixedRate = 86400000)
     public void mailDiffusor(){
         List<Lending> lendings = lendingRepository.findAll() ;
         for (Lending lending:lendings) {

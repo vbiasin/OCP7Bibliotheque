@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 public class WebAdministrationController {
 
@@ -22,6 +24,7 @@ public class WebAdministrationController {
 
     @GetMapping("/administration")
     public String administration() {
+
         return "administration";
     }
 
@@ -42,17 +45,15 @@ public class WebAdministrationController {
 
     @PostMapping("/searchUserAccount")
     public String searchUserAccount( @RequestParam(name="mail", defaultValue="toto@exemple.com") String mail,@RequestParam(name="lastName", defaultValue="azerty") String lastName,
-                                    @RequestParam(name="firstName", defaultValue="qwerty") String firstName, @RequestParam(name="pageList", defaultValue="0") int pageList,@RequestParam(name="size",defaultValue="10") int size,Model model) throws Exception {
+                                    @RequestParam(name="firstName", defaultValue="qwerty") String firstName,Model model) throws Exception {
 
-        System.out.println("mail: "+mail+" Nom: "+lastName+" Prénom: "+firstName+" PageList: "+ pageList+" Size: "+size);
-        UserAccountDTO userAccountDTO = new UserAccountDTO(mail,lastName,firstName,pageList,size);
-        Page<UserAccount> pageListUsers;
+        UserAccountDTO userAccountDTO = new UserAccountDTO(mail,lastName,firstName);
+        List<UserAccount> pageListUsers;
         try {
 
             pageListUsers = userProxy.searchUserAccount(userAccountDTO);
-            model.addAttribute("listUsers",pageListUsers.getContent());
-            int []pagesListUsers = new int[pageListUsers.getTotalPages()];
             model.addAttribute("pageListUsers",pageListUsers);
+
 
 
         } catch (Exception e) {
@@ -71,16 +72,14 @@ public class WebAdministrationController {
 
     @PostMapping("/searchLibrary")
     public String searchLibrary( @RequestParam(name="name", defaultValue="nomBibliotheque") String name,@RequestParam(name="address", defaultValue="adresseBibliotheque") String address,
-                                   @RequestParam(name="pageList", defaultValue="0") int pageList,@RequestParam(name="size",defaultValue="10") int size,Model model) throws Exception {
+                                   Model model) throws Exception {
 
 
-       LibraryDTO libraryDTO = new LibraryDTO(name,address,pageList,size);
-        Page<Library> pageListLibraries;
+       LibraryDTO libraryDTO = new LibraryDTO(name,address);
+        List<Library> pageListLibraries;
         try {
 
             pageListLibraries = userProxy.searchLibrary(libraryDTO);
-            model.addAttribute("listLibrairies",pageListLibraries.getContent());
-            int []pagesListLibraries = new int[pageListLibraries.getTotalPages()];
             model.addAttribute("pageListLibraries",pageListLibraries);
 
 

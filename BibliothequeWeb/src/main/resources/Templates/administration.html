@@ -109,7 +109,7 @@
             <tr>
               <th>ID</th><th>Mail </th><th>Nom</th><th>Prénom</th><th>Rôles</th><th>Ajouter Rôle</th><th>Supprimer Rôle</th><th>Supprimer Compte</th>
             </tr>
-            <tr th:each="user:${pageListUsers}">
+            <tr th:each="user:${listUsers}">
               <td th:text= "${user.id}"></td>
               <td th:text= "${user.mail}"></td>
               <td th:text= "${user.contact.lastName}"></td>
@@ -136,13 +136,6 @@
               </td>
             </tr>
           </table>
-          <div class="container">
-            <ul class="nav nav-pills">
-              <li th:each="p,status:${pageListUsers}">
-                <a th:href="@{/administration(pageList=${status.index})}" th:text="${status.index}"></a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

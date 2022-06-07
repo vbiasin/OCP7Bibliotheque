@@ -10,12 +10,13 @@ import com.ocp7bibliotheque.bibliothequeadministration.Services.ILibraryService;
 import com.ocp7bibliotheque.bibliothequeadministration.Services.IRoleService;
 import com.ocp7bibliotheque.bibliothequeadministration.Services.IUserAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class AdministrationController {
@@ -53,9 +54,9 @@ public class AdministrationController {
     }
 
     @PostMapping("/searchUserAccountBack")
-    public ResponseEntity<Page<UserAccount>> searchUserAccount(@RequestBody UserAccountDTO userAccountDTO) throws Exception {
+    public ResponseEntity<List<UserAccount>> searchUserAccount(@RequestBody UserAccountDTO userAccountDTO) throws Exception {
         try {
-            return new ResponseEntity<>(userAccountService.searchUserAccount(userAccountDTO.getMail(),userAccountDTO.getLastName(), userAccountDTO.getFirstName(),userAccountDTO.getPages(),userAccountDTO.getSize()), HttpStatus.OK);
+            return new ResponseEntity<>(userAccountService.searchUserAccount(userAccountDTO.getMail(),userAccountDTO.getLastName(), userAccountDTO.getFirstName()), HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -98,9 +99,9 @@ public class AdministrationController {
     }
 
     @PostMapping("/searchLibraryBack")
-    public ResponseEntity<Page<Library>> searchLibrary(@RequestBody LibraryDTO libraryDTO) throws Exception {
+    public ResponseEntity<List<Library>> searchLibrary(@RequestBody LibraryDTO libraryDTO) throws Exception {
         try {
-            return new ResponseEntity<>(libraryService.searchLibrary(libraryDTO.getName(),libraryDTO.getAddress(),libraryDTO.getPages(),libraryDTO.getSize()), HttpStatus.OK);
+            return new ResponseEntity<>(libraryService.searchLibrary(libraryDTO.getName(),libraryDTO.getAddress()), HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
         }

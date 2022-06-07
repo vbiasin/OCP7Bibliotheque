@@ -9,11 +9,9 @@ public class LibraryDTO implements Serializable {
     private int pages;
     private int size;
 
-    public LibraryDTO(String name, String address, int pages, int size) {
+    public LibraryDTO(String name, String address) {
         this.name = name;
         this.address = address;
-        this.pages = pages;
-        this.size = size;
     }
 
     public String getName() {
@@ -32,20 +30,5 @@ public class LibraryDTO implements Serializable {
         this.address = address;
     }
 
-    public int getPages() {
-        return pages;
-    }
-
-    public void setPages(int pages) {
-        this.pages = pages;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
 }
 

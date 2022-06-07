@@ -12,8 +12,6 @@ public class BookDTO implements Serializable {
     private String author;
     private String title;
     private Book book;
-    int pages;
-    int size;
 
     public BookDTO() {
     }
@@ -28,11 +26,9 @@ public class BookDTO implements Serializable {
         this.idBook = idBook;
     }
 
-    public BookDTO(String author, String title, int pages, int size) {
+    public BookDTO(String author, String title) {
         this.author = author;
         this.title = title;
-        this.pages = pages;
-        this.size = size;
     }
 
     public int getIdLibrary() {
@@ -82,20 +78,5 @@ public class BookDTO implements Serializable {
     public void setTitle(String title) {
         this.title = title;
     }
-
-    public int getPages() {
-        return pages;
-    }
-
-    public void setPages(int pages) {
-        this.pages = pages;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
 }
+

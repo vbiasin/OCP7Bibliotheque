@@ -5,15 +5,12 @@ public class UserAccountDTO {
     private String mail;
     private String lastName;
     private String firstName;
-    private int pages;
-    private int size;
 
-    public UserAccountDTO(String mail, String lastName, String firstName, int pages, int size) {
+
+    public UserAccountDTO(String mail, String lastName, String firstName) {
         this.mail = mail;
         this.lastName = lastName;
         this.firstName = firstName;
-        this.pages = pages;
-        this.size = size;
     }
 
     public String getMail() {
@@ -40,19 +37,4 @@ public class UserAccountDTO {
         this.firstName = firstName;
     }
 
-    public int getPages() {
-        return pages;
-    }
-
-    public void setPages(int pages) {
-        this.pages = pages;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
 }

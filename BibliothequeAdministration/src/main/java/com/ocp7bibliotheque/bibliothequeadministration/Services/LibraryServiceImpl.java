@@ -47,7 +47,7 @@ public class LibraryServiceImpl implements ILibraryService {
     }
 
     @Override
-    public Page<Library> searchLibrary(String name, String address, int pages, int size) throws Exception {
+    public List<Library> searchLibrary(String name, String address) throws Exception {
         List<Library> libraries = libraryRepository.findByNameContainsOrAddressContains(name,address);
         List<Library> noDoublonLibraries = new ArrayList<>();
         if(!libraries.isEmpty()){
@@ -64,11 +64,8 @@ public class LibraryServiceImpl implements ILibraryService {
         }
         else noDoublonLibraries = libraryRepository.findAll();
 
-        Pageable pageable = PageRequest.of(0, size);
 
-        Page<Library> resultPage = new PageImpl<>(noDoublonLibraries, pageable, (noDoublonLibraries.size())%size);
-
-        return resultPage;
+        return noDoublonLibraries;
 
     }
 

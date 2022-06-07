@@ -8,9 +8,10 @@ import com.ocp7bibliotheque.bibliothequeweb.Entites.Contact;
 import com.ocp7bibliotheque.bibliothequeweb.Entites.Library;
 import com.ocp7bibliotheque.bibliothequeweb.Entites.UserAccount;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.List;
 
 
 @FeignClient(name = "BibliothequeAdministration", url = "localhost:8280")
@@ -31,13 +32,13 @@ public interface BibliothequeAdministrationUserProxy {
     void addRole(@RequestBody RoleDTO roleDTO);
 
     @PostMapping(value = "/searchUserAccountBack")
-    Page<UserAccount> searchUserAccount(@RequestBody UserAccountDTO userAccountDTO);
+    List<UserAccount> searchUserAccount(@RequestBody UserAccountDTO userAccountDTO);
 
     @PostMapping(value = "/removeRoleBack")
     void removeRole(@RequestBody RoleDTO roleDTO);
 
     @PostMapping(value = "/searchLibraryBack")
-    Page<Library> searchLibrary(@RequestBody LibraryDTO libraryDTO);
+    List<Library> searchLibrary(@RequestBody LibraryDTO libraryDTO);
 
     @PostMapping(value = "/removeUserAccountBack")
     void removeUserAccount(@RequestBody int idUserAccount);

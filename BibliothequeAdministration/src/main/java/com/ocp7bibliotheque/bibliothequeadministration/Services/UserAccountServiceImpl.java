@@ -96,7 +96,7 @@ public class UserAccountServiceImpl implements IUserAccountService{
     }
 
     @Override
-    public Page<UserAccount> searchUserAccount(String mail, String lastName, String firstName, int pages, int size) throws Exception {
+    public List<UserAccount> searchUserAccount(String mail, String lastName, String firstName) throws Exception {
        List<Contact> contacts = contactRepository.findByLastNameOrFirstName(lastName, firstName);
        List<Contact> noDoublonContacts = new ArrayList<>();
        if(!contacts.isEmpty()){
@@ -138,10 +138,6 @@ public class UserAccountServiceImpl implements IUserAccountService{
            }
        }
 
-        Pageable pageable = PageRequest.of(0, size);
-
-        Page<UserAccount> resultPage = new PageImpl<>(result, pageable, (result.size())%size);
-
-        return resultPage;
+        return result;
     }
 }
