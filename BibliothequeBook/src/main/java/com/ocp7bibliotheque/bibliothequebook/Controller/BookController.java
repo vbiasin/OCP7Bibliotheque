@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class BookController {
 
@@ -63,9 +65,9 @@ public class BookController {
     }
 
     @PostMapping("/searchBookBack")
-    public ResponseEntity<Page<Book>> searchLibrary(@RequestBody BookDTO bookDTO) throws Exception {
+    public ResponseEntity<List<Book>> searchLibrary(@RequestBody BookDTO bookDTO) throws Exception {
         try {
-            return new ResponseEntity<>(bookService.searchBook(bookDTO.getTitle(),bookDTO.getAuthor(),bookDTO.getPages(),bookDTO.getSize()), HttpStatus.OK);
+            return new ResponseEntity<>(bookService.searchBook(bookDTO.getTitle(),bookDTO.getAuthor()), HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
         }
