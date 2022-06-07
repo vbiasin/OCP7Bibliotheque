@@ -30,7 +30,7 @@ public interface BibliothequeBookProxy {
     void removeBook(@RequestBody int idBook);
 
     @PostMapping(value = "/searchBookBack")
-    Page<Book> searchBook(@RequestBody BookDTO bookDTO);
+    List<Book> searchBook(@RequestBody BookDTO bookDTO);
 
     @GetMapping(value="/loansBack")
     Boolean getLendingPage(@RequestParam("activeUsername")String activeUsername);

@@ -62,7 +62,7 @@ public class BookServiceImpl implements IBookService {
     }
 
     @Override
-    public Page<Book> searchBook(String title, String author, int pages, int size) throws Exception {
+    public List<Book> searchBook(String title, String author) throws Exception {
         List<Book> books = bookRepository.findByTitleContainsOrAuthorContains(title,author);
         List<Book> noDoublonBooks = new ArrayList<>();
         if(!books.isEmpty()){
@@ -79,10 +79,7 @@ public class BookServiceImpl implements IBookService {
         }
         else noDoublonBooks = bookRepository.findAll();
 
-        Pageable pageable = PageRequest.of(0, size);
 
-        Page<Book> resultPage = new PageImpl<>(noDoublonBooks, pageable, (noDoublonBooks.size())%size);
-
-        return resultPage;
+        return noDoublonBooks;
     }
 }

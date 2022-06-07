@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class WebBookController {
@@ -51,16 +52,14 @@ public class WebBookController {
 
     @PostMapping("/searchBook")
     public String searchLibrary(@RequestParam(name="title", defaultValue="titreLivre") String title, @RequestParam(name="author", defaultValue="auteurLivre") String author,
-                                @RequestParam(name="pageList", defaultValue="0") int pageList, @RequestParam(name="size",defaultValue="10") int size, Model model) throws Exception {
+                                Model model) throws Exception {
 
 
-        BookDTO bookDTO = new BookDTO(author,title,pageList,size);
-        Page<Book> pageListBooks;
+        BookDTO bookDTO = new BookDTO(author,title);
+       List<Book> pageListBooks;
         try {
 
             pageListBooks = bookProxy.searchBook(bookDTO);
-            model.addAttribute("listbooks",pageListBooks.getContent());
-            int []pagesListBooks = new int[pageListBooks.getTotalPages()];
             model.addAttribute("pageListBooks",pageListBooks);
 
 
