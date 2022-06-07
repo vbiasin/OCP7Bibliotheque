@@ -52,7 +52,7 @@ public class WebAdministrationController {
         try {
 
             pageListUsers = userProxy.searchUserAccount(userAccountDTO);
-            model.addAttribute("pageListUsers",pageListUsers);
+            model.addAttribute("listUsers",pageListUsers);
 
 
 
