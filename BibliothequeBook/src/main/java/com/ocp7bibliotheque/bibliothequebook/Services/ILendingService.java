@@ -8,5 +8,6 @@ public interface ILendingService {
     public Lending borrow(String userAccountMail, int idBook) throws Exception;
     public Lending extendLoan(int idLending) throws Exception;
     public List<Lending> displayLoan(String activeUserAccountMail) throws Exception;
+    public void returnLoan(int idLending) throws Exception;
 
 }

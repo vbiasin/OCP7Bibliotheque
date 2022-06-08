@@ -60,4 +60,16 @@ public class LendingServiceImpl implements ILendingService {
         }
         return lendingRepository.findByUserAccount(userAccount.get());
     }
+
+    @Override
+    public void returnLoan(int idLending) throws Exception {
+        Optional<Lending> lending = lendingRepository.findById(idLending);
+        if(lending.isEmpty()) throw new Exception ("Ce prêt n'existe pas !'");
+        Optional<Book> book = bookRepository.findById(lending.get().getBook().getId());
+        if(book.isEmpty()) throw new Exception ("Ce livre n'existe pas !");
+        book.get().setNumberExemplar(book.get().getNumberExemplar()+1);
+        bookRepository.saveAndFlush(book.get());
+        lending.get().setStatus("Terminé");
+        lendingRepository.saveAndFlush(lending.get());
+    }
 }

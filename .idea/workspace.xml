@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/ILendingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/ILendingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/LendingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/LendingServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,14 +253,8 @@
       <workItem from="1653503143898" duration="3856000" />
       <workItem from="1653803648100" duration="4405000" />
       <workItem from="1654102593963" duration="6717000" />
-      <workItem from="1654619865869" duration="2508000" />
-    </task>
-    <task id="LOCAL-00002" summary="ajout module bibliothequeBook (avec module)">
-      <created>1636489413499</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1636489413499</updated>
+      <workItem from="1654619865869" duration="2697000" />
+      <workItem from="1654705539914" duration="3359000" />
     </task>
     <task id="LOCAL-00003" summary="test module bibliothequeBook 10/11/2021">
       <created>1636572332489</created>
@@ -596,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654622100081</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="modifications du retour des fonctions de recherches">
+      <created>1654622494731</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1654622494731</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
