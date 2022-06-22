@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/ILendingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/ILendingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/LendingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBook/src/main/java/com/ocp7bibliotheque/bibliothequebook/Services/LendingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Mail/MyConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Mail/MyConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Service/MailAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Service/MailAlert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server-repo/BibliothequeAdministration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repo/BibliothequeAdministration.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +86,7 @@
       <recent name="com.ocp7bibliotheque.bibliothequebook.Entites" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BibliothequeWebApplication">
+  <component name="RunManager" selected="Spring Boot.BibliothequeBatchMailApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="OCP7BibliothequeWeb" />
       <method v="2">
@@ -254,14 +255,14 @@
       <workItem from="1653803648100" duration="4405000" />
       <workItem from="1654102593963" duration="6717000" />
       <workItem from="1654619865869" duration="2697000" />
-      <workItem from="1654705539914" duration="3359000" />
-    </task>
-    <task id="LOCAL-00003" summary="test module bibliothequeBook 10/11/2021">
-      <created>1636572332489</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1636572332535</updated>
+      <workItem from="1654705539914" duration="6973000" />
+      <workItem from="1655146973839" duration="293000" />
+      <workItem from="1655234321428" duration="9152000" />
+      <workItem from="1655318680446" duration="546000" />
+      <workItem from="1655397535446" duration="2074000" />
+      <workItem from="1655538001876" duration="91000" />
+      <workItem from="1655652024232" duration="430000" />
+      <workItem from="1655910792599" duration="347000" />
     </task>
     <task id="LOCAL-00004" summary="ajout module BibliothequeGateway">
       <created>1636790760725</created>
@@ -599,14 +600,20 @@
       <option name="project" value="LOCAL" />
       <updated>1654622494731</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="implémentation de la fonction permettant de retourner un prêt">
+      <created>1654710760424</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1654710760424</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test login 19/01/2022" />
     <MESSAGE value="Test login 26/01/2022" />
     <MESSAGE value="Test2 login 26/01/2022" />
     <MESSAGE value="modif lending" />
@@ -631,7 +638,8 @@
     <MESSAGE value="test lancement module BatchMail avec Spring Config" />
     <MESSAGE value="uniformisation version Java (Java 15)" />
     <MESSAGE value="modifications du retour des fonctions de recherches" />
-    <option name="LAST_COMMIT_MESSAGE" value="modifications du retour des fonctions de recherches" />
+    <MESSAGE value="implémentation de la fonction permettant de retourner un prêt" />
+    <option name="LAST_COMMIT_MESSAGE" value="implémentation de la fonction permettant de retourner un prêt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -643,7 +651,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Service/MailAlert.java</url>
-          <line>54</line>
+          <line>55</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
