@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Mail/MyConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Mail/MyConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Service/MailAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeBatchMail/src/main/java/com/ocp7bibliotheque/bibliothequebatchmail/Service/MailAlert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server-repo/BibliothequeAdministration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repo/BibliothequeAdministration.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +23,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -41,24 +45,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="jdk.selected.JAVA_MODULE" value="17" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/config-server-repo" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Projets/JAVA/Projet7/OCP7Bibliotheque/BibliothequeWeb",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -86,7 +86,7 @@
       <recent name="com.ocp7bibliotheque.bibliothequebook.Entites" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BibliothequeBatchMailApplication">
+  <component name="RunManager" selected="Spring Boot.BibliothequeSpringCloudConfigApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="OCP7BibliothequeWeb" />
       <method v="2">
@@ -102,9 +102,8 @@
     </configuration>
     <configuration name="BibliothequeAdministrationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="BibliothequeAdministration" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequeadministration.BibliothequeAdministrationApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequeadministration.BibliothequeAdministrationApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,37 +117,33 @@
     </configuration>
     <configuration name="BibliothequeBookApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="BibliothequeBook" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequebook.BibliothequeBookApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequebook.BibliothequeBookApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="BibliothequeEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="BibliothequeEureka" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequeeureka.BibliothequeEurekaApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequeeureka.BibliothequeEurekaApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="BibliothequeSpringCloudConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="BibliothequeSpringCloudConfig" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequespringcloudconfig.BibliothequeSpringCloudConfigApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequespringcloudconfig.BibliothequeSpringCloudConfigApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="BibliothequeWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="BibliothequeWeb" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocp7bibliotheque.bibliothequeweb.BibliothequeWebApplication" />
       <option name="VM_PARAMETERS" value="-Dserver.port=8080" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -263,6 +258,8 @@
       <workItem from="1655538001876" duration="91000" />
       <workItem from="1655652024232" duration="430000" />
       <workItem from="1655910792599" duration="347000" />
+      <workItem from="1682574433467" duration="372000" />
+      <workItem from="1682575974317" duration="229000" />
     </task>
     <task id="LOCAL-00004" summary="ajout module BibliothequeGateway">
       <created>1636790760725</created>
@@ -612,6 +609,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test login 26/01/2022" />
