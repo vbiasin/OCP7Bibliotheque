@@ -6,7 +6,6 @@
         <exploded>true</exploded>
         <module>BibliothequeSpringCloudConfig</module>
         <packaging>war</packaging>
-        <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
     <root id="root">
@@ -36,11 +35,7 @@
           <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:9.0.53" />
           <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.53" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.10" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.10" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.10" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.10" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.10" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.3.10" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.32" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.3.10" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.10" />
@@ -75,6 +70,10 @@
           <element id="library" level="project" name="Maven: io.micrometer:micrometer-core:1.7.4" />
           <element id="library" level="project" name="Maven: org.hdrhistogram:HdrHistogram:2.1.12" />
           <element id="library" level="project" name="Maven: org.latencyutils:LatencyUtils:2.0.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.12" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.10" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.10" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.3.10" />
         </element>
       </element>
       <element id="directory" name="META-INF">

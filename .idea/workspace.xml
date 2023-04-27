@@ -4,14 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="2fbe8f56-1dce-497f-b78e-1e1cd00f8faf" name="Changes" comment="TESTS">
+      <change afterPath="$PROJECT_DIR$/OCP7BibliothequeWeb/OCP7BibliothequeWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeAdministration_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeAdministration_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeAdministration_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeAdministration_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeBatchMail_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeBatchMail_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeBatchMail_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeBatchMail_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeBook_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeBook_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeBook_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeBook_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeEureka_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeEureka_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeEureka_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeEureka_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeSpringCloudConfig_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeSpringCloudConfig_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeSpringCloudConfig_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeSpringCloudConfig_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeWeb_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeWeb_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BibliothequeWeb_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BibliothequeWeb_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BibliothequeSpringCloudConfig/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -31,6 +48,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -38,6 +60,17 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="6f80b7c1-cbf1-4016-ab29-4f566e301342" />
+        <option name="url" value="https://github.com/vbiasin/OCP7Bibliotheque.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="20NTdNrZ0aCYF1yYrKzRGqvdx26" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -47,6 +80,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/Projets/JAVA/Projet7/OCP7Bibliotheque/BibliothequeWeb",
     "node.js.detected.package.eslint": "true",
@@ -54,8 +92,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.36091954",
+    "settings.editor.selected.configurable": "preferences.general",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -87,6 +126,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.BibliothequeSpringCloudConfigApplication">
+    <configuration name="BibliothequeWebApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ocp7bibliotheque.bibliothequeweb.BibliothequeWebApplication" />
+      <module name="BibliothequeWeb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ocp7bibliotheque.bibliothequeweb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="OCP7BibliothequeWeb" />
       <method v="2">
@@ -149,6 +201,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.BibliothequeWebApplication" />
       <item itemvalue="Spring Boot.BibliothequeEurekaApplication" />
       <item itemvalue="Spring Boot.BibliothequeSpringCloudConfigApplication" />
       <item itemvalue="Spring Boot.BibliothequeWebApplication" />
@@ -156,6 +209,11 @@
       <item itemvalue="Spring Boot.BibliothequeBookApplication" />
       <item itemvalue="Spring Boot.BibliothequeBatchMailApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BibliothequeWebApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -259,14 +317,7 @@
       <workItem from="1655652024232" duration="430000" />
       <workItem from="1655910792599" duration="347000" />
       <workItem from="1682574433467" duration="372000" />
-      <workItem from="1682575974317" duration="229000" />
-    </task>
-    <task id="LOCAL-00004" summary="ajout module BibliothequeGateway">
-      <created>1636790760725</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1636790760726</updated>
+      <workItem from="1682575974317" duration="2158000" />
     </task>
     <task id="LOCAL-00005" summary="ajout module BibliothequeAdministration">
       <created>1637005647614</created>
@@ -604,7 +655,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654710760424</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="TESTS">
+      <created>1682576384876</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1682576384876</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,7 +680,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test login 26/01/2022" />
     <MESSAGE value="Test2 login 26/01/2022" />
     <MESSAGE value="modif lending" />
     <MESSAGE value="modif employee, userAccount et suppression Member" />
@@ -647,7 +704,8 @@
     <MESSAGE value="uniformisation version Java (Java 15)" />
     <MESSAGE value="modifications du retour des fonctions de recherches" />
     <MESSAGE value="implémentation de la fonction permettant de retourner un prêt" />
-    <option name="LAST_COMMIT_MESSAGE" value="implémentation de la fonction permettant de retourner un prêt" />
+    <MESSAGE value="TESTS" />
+    <option name="LAST_COMMIT_MESSAGE" value="TESTS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
